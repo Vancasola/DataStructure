@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF37255122A2C44E004A1536 /* LinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF37254F22A2C44E004A1536 /* LinkList.cpp */; };
 		DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF5E99AC22A2AD6D00954903 /* main.cpp */; };
+		DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF8BB9C922A2B1990019739A /* SeqList.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +25,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DF37254F22A2C44E004A1536 /* LinkList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LinkList.cpp; sourceTree = "<group>"; };
+		DF37255022A2C44E004A1536 /* LinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkList.hpp; sourceTree = "<group>"; };
 		DF5E99A922A2AD6D00954903 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5E99AC22A2AD6D00954903 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DF8BB9C922A2B1990019739A /* SeqList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeqList.cpp; sourceTree = "<group>"; };
+		DF8BB9CA22A2B1990019739A /* SeqList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SeqList.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,10 @@
 			isa = PBXGroup;
 			children = (
 				DF5E99AC22A2AD6D00954903 /* main.cpp */,
+				DF8BB9C922A2B1990019739A /* SeqList.cpp */,
+				DF8BB9CA22A2B1990019739A /* SeqList.hpp */,
+				DF37255022A2C44E004A1536 /* LinkList.hpp */,
+				DF37254F22A2C44E004A1536 /* LinkList.cpp */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -119,6 +129,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */,
+				DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */,
+				DF37255122A2C44E004A1536 /* LinkList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
