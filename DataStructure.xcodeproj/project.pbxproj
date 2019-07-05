@@ -9,7 +9,13 @@
 /* Begin PBXBuildFile section */
 		DF37255122A2C44E004A1536 /* LinkList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF37254F22A2C44E004A1536 /* LinkList.cpp */; };
 		DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF5E99AC22A2AD6D00954903 /* main.cpp */; };
+		DF6C1D4D22CF363100B3760D /* B1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D4B22CF363100B3760D /* B1001.cpp */; };
+		DF6C1D4F22CF3A8200B3760D /* B1032.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D4E22CF3A8200B3760D /* B1032.cpp */; };
+		DF6C1D5122CF3F5A00B3760D /* c1934.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D5022CF3F5A00B3760D /* c1934.cpp */; };
+		DF6C1D5322CF467700B3760D /* B1036.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D5222CF467700B3760D /* B1036.cpp */; };
+		DF6C1D5522CF528500B3760D /* c5901.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D5422CF528500B3760D /* c5901.cpp */; };
 		DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF8BB9C922A2B1990019739A /* SeqList.cpp */; };
+		DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,8 +35,15 @@
 		DF37255022A2C44E004A1536 /* LinkList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinkList.hpp; sourceTree = "<group>"; };
 		DF5E99A922A2AD6D00954903 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5E99AC22A2AD6D00954903 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DF6C1D4B22CF363100B3760D /* B1001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1001.cpp; sourceTree = "<group>"; };
+		DF6C1D4E22CF3A8200B3760D /* B1032.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1032.cpp; sourceTree = "<group>"; };
+		DF6C1D5022CF3F5A00B3760D /* c1934.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = c1934.cpp; sourceTree = "<group>"; };
+		DF6C1D5222CF467700B3760D /* B1036.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1036.cpp; sourceTree = "<group>"; };
+		DF6C1D5422CF528500B3760D /* c5901.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = c5901.cpp; sourceTree = "<group>"; };
 		DF8BB9C922A2B1990019739A /* SeqList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeqList.cpp; sourceTree = "<group>"; };
 		DF8BB9CA22A2B1990019739A /* SeqList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SeqList.hpp; sourceTree = "<group>"; };
+		DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
+		DFAAC5AF22B0E8DA00DF0EF0 /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,10 +77,17 @@
 			isa = PBXGroup;
 			children = (
 				DF5E99AC22A2AD6D00954903 /* main.cpp */,
+				DF6C1D4B22CF363100B3760D /* B1001.cpp */,
+				DF6C1D5422CF528500B3760D /* c5901.cpp */,
+				DF6C1D4E22CF3A8200B3760D /* B1032.cpp */,
+				DF6C1D5022CF3F5A00B3760D /* c1934.cpp */,
+				DF6C1D5222CF467700B3760D /* B1036.cpp */,
 				DF8BB9C922A2B1990019739A /* SeqList.cpp */,
 				DF8BB9CA22A2B1990019739A /* SeqList.hpp */,
 				DF37255022A2C44E004A1536 /* LinkList.hpp */,
 				DF37254F22A2C44E004A1536 /* LinkList.cpp */,
+				DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */,
+				DFAAC5AF22B0E8DA00DF0EF0 /* QuickSort.hpp */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -130,7 +150,13 @@
 			files = (
 				DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */,
 				DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */,
+				DF6C1D5122CF3F5A00B3760D /* c1934.cpp in Sources */,
+				DF6C1D4F22CF3A8200B3760D /* B1032.cpp in Sources */,
+				DF6C1D4D22CF363100B3760D /* B1001.cpp in Sources */,
+				DF6C1D5522CF528500B3760D /* c5901.cpp in Sources */,
 				DF37255122A2C44E004A1536 /* LinkList.cpp in Sources */,
+				DF6C1D5322CF467700B3760D /* B1036.cpp in Sources */,
+				DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +277,7 @@
 		DF5E99B122A2AD6D00954903 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -259,6 +286,7 @@
 		DF5E99B222A2AD6D00954903 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
