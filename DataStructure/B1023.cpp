@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/7/29.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 int main()
 {
@@ -42,3 +42,4 @@ int main()
     printf("%s",ans);
     return 0;
 }
+*/
