@@ -48,6 +48,7 @@ int main()
 }
 */
 //consider symetrical situations to find regulation.
+/*
 int main()
 {
     char pat[100010];
@@ -72,3 +73,4 @@ int main()
     printf("%d",result);
     return 0;
 }
+*/
