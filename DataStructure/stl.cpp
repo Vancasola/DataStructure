@@ -10,6 +10,8 @@
 #include <vector>
 #include <iostream>
 #include <set>
+#include <map>
+#include <unordered_map>
 #include <string>
 #include <algorithm>
 using namespace std;
@@ -172,3 +174,91 @@ int main(void)
     return 0;
 }
 */
+/*
+int main()
+{
+    unordered_map <string,int> mp;
+    mp["abc"] = 1;
+    mp["bc"] = 2;
+    mp["c"] = 3;
+    for(unordered_map<string,int>::iterator it = mp.begin();it!=mp.end();it++)
+        printf("%s %d\n",it->first.c_str(),it->second);
+    mp.erase("c");
+    for(unordered_map<string,int>::iterator its = mp.find("bc");its!=mp.end();its++)
+        printf("%s %d\n",its->first.c_str(),its->second);
+    mp.erase(mp.begin(),mp.end());
+    return 0;
+}
+*/
+int f(int n)
+{
+    if(n==0||n==1)return 1;
+        return f(n-1)+f(n-2);
+}
+
+
+const int maxn = 11;
+int n, p[maxn], hashtbl[maxn]={0};
+void generatep(int index)
+{
+    if(index==n+1)
+    {
+        printf("%d%d%d\n",p[1],p[2],p[3]);
+        return;
+    }
+    for(int i=1;i<=n;i++)
+    {
+        if(!hashtbl[i])
+        {
+            hashtbl[i]=1;
+            p[index]=i;
+            generatep(index+1);
+            hashtbl[i]=0;
+        }
+    }
+}
+/*
+int main(void)
+{
+    n=3;
+    generatep(1);
+    return 0;
+}
+*/
+
+
+
+
+
+
+
+/*
+const int maxn = 11;
+int n, p[maxn],hashtable[maxn]= {false};
+void generateP(int index)
+{
+    if(index==n+1){
+        for(int i=1;i<=n;i++)
+        {
+            printf("%d",p[i]);
+        }
+        printf("\n");
+        return;
+    }
+    for(int x=1;x<=n;x++)
+    {
+        if(hashtable[x]==false)
+        {
+            p[index] = x;
+            hashtable[x] = true;
+            generateP(index+1);
+            hashtable[x]=false;
+        }
+    }
+}
+int main()
+{
+    n=3;
+    generateP(1);
+    return 0;
+}*/

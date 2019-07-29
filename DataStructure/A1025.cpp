@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/7/29.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 #include <string.h>
 #include <iostream>
@@ -70,3 +70,4 @@ int main()
     display(s[i]);
     return 0;
 }
+*/
