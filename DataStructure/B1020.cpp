@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/7/29.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 #include <algorithm>
 using namespace std;
@@ -53,17 +53,7 @@ int main()
     sort(ca,ca+k,cmp);
     i=0;
     while(compute(pr, ca[i++], pre)!=0&&i<k);/***********i will be eceed k-1
-    /*for(i=0;i<k;i++)
-    {
-        if(ca[i].s<=r)
-        {
-            r-=ca[i].s;
-            result+=ca[i].c;
-        }else{
-            result+=ca[i].p*r;
-            break;
-        }
-    }*/
+    
     printf("%.2lf",result);
     return 0;
-}
+}*/
