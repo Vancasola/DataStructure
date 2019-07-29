@@ -11,7 +11,9 @@
 #include <iostream>
 #include <set>
 #include <string>
+#include <algorithm>
 using namespace std;
+/*
 int main()
 {
     vector<int> name;
@@ -67,7 +69,7 @@ int main()
     cout<<str<<endl;
     cout<<str.substr(2,5);
     return 0;
-}
+}*/
 /*
  vector<type> name; variable array
  vector<vector<type>> name; two dimensions array
@@ -92,4 +94,81 @@ int main()
  name.insert(pos,value)
  name.erase(it+1,it+4)
  name.substr(2,5)
+*/
+/*
+bool cmp(int a, int b)
+{
+    return a>b;
+}
+struct node
+{
+    int a,b;
+}N[5];
+bool cmp1(node n1, node n2)
+{
+    return n1.a>n2.a;
+}
+int main(void)
+{
+    int a = 1, b = 2, x[5] = {1,2,3,4,5}, i=0;
+    printf("%d\n",max(1,max(2,3)));
+    printf("a==%d b==%d\n",a,b);
+    swap(a,b);
+    printf("a==%d b==%d\n",a,b);
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",x[i]);
+    }
+    printf("\n");
+    reverse(x,x+5);
+    reverse(x,x+5);
+    for(i=0;i<5;i++)
+    {
+        printf("%d ",x[i]);
+    }
+    string str="abcde";
+    reverse(str.begin(), str.end());
+    printf("%s\n",str.c_str());
+    printf("%d%d%d%d%d\n",x[0],x[1],x[2],x[3],x[4]);
+    while(next_permutation(x,x+3))
+    {
+        printf("%d%d%d%d%d\n",x[0],x[1],x[2],x[3],x[4]);
+    }
+    //fill(x,x+5,666);
+    sort(x,x+5,cmp);
+    printf("\n%d%d%d%d%d\n",x[0],x[1],x[2],x[3],x[4]);
+    for(i=0;i<5;i++)
+    {
+        N[i].a=i;
+        N[i].b=5-i;
+    }
+    for(i=0;i<5;i++)
+    {
+        printf("a = %d b = %d\n",N[i].a,N[i].b);
+    }
+    sort(N,N+5,cmp1);
+    for(i=0;i<5;i++)
+    {
+        printf("a = %d b = %d\n",N[i].a,N[i].b);
+    }
+    vector<int> v;
+    for(i=0;i<5;i++)
+        v.push_back(i);
+    for(vector<int>::iterator it=v.begin();it!=v.end();it++)
+    {
+        printf("%d ",*it);
+    }
+    sort(v.begin(),v.end(),cmp);
+    putchar('\n');
+    for(vector<int>::iterator it=v.begin();it!=v.end();it++)
+    {
+        printf("%d ",*it);
+    }
+    putchar('\n');
+    reverse(x,x+5);
+    for(i=0;i<5;i++)
+        printf("%d ",x[i]);
+    printf("\n%d,%d\n",lower_bound(x, x+5, 3)-x,upper_bound(x,x+5,3)-x);
+    return 0;
+}
 */
