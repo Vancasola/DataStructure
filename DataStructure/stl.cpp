@@ -11,6 +11,7 @@
 #include <iostream>
 #include <set>
 #include <map>
+#include <queue>
 #include <unordered_map>
 #include <string>
 #include <algorithm>
@@ -285,3 +286,31 @@ int main()
     generateP(1);
     return 0;
 }*/
+struct Fruit
+{
+    string name;
+    int price;
+    friend bool operator < (Fruit f1,Fruit f2)
+    {
+        return f1.price>f2.price;
+    }
+};
+
+int main()
+{
+    priority_queue<Fruit> qu;
+    for(int i=0;i<10;i++)
+    {
+        Fruit f;
+        string str = "banana";
+        f.name=str;
+        f.price = i;
+        qu.push(f);
+    }
+    while(!qu.empty())
+    {
+        printf("%d ",qu.top().price);
+        qu.pop();
+    }
+    return 0;
+}
