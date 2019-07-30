@@ -23,6 +23,7 @@
 		DF70B1DB22EDC75B00C7B22D /* B1022.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF70B1DA22EDC75B00C7B22D /* B1022.cpp */; };
 		DF7E224422EFF53D00D62E04 /* c1928.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF7E224322EFF53D00D62E04 /* c1928.cpp */; };
 		DF7E224622F03DAA00D62E04 /* fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF7E224522F03DAA00D62E04 /* fraction.cpp */; };
+		DF7E224822F05D3D00D62E04 /* B1013A1059.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF7E224722F05D3D00D62E04 /* B1013A1059.cpp */; };
 		DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF8BB9C922A2B1990019739A /* SeqList.cpp */; };
 		DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */; };
 		DFD7445522EF2FDE00D6C685 /* B1040A1093.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD7445422EF2FDE00D6C685 /* B1040A1093.cpp */; };
@@ -60,6 +61,7 @@
 		DF70B1DA22EDC75B00C7B22D /* B1022.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1022.cpp; sourceTree = "<group>"; };
 		DF7E224322EFF53D00D62E04 /* c1928.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = c1928.cpp; sourceTree = "<group>"; };
 		DF7E224522F03DAA00D62E04 /* fraction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fraction.cpp; sourceTree = "<group>"; };
+		DF7E224722F05D3D00D62E04 /* B1013A1059.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1013A1059.cpp; sourceTree = "<group>"; };
 		DF8BB9C922A2B1990019739A /* SeqList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeqList.cpp; sourceTree = "<group>"; };
 		DF8BB9CA22A2B1990019739A /* SeqList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SeqList.hpp; sourceTree = "<group>"; };
 		DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				DF70B1D822EDA68400C7B22D /* stl.cpp */,
 				DF7E224322EFF53D00D62E04 /* c1928.cpp */,
 				DF7E224522F03DAA00D62E04 /* fraction.cpp */,
+				DF7E224722F05D3D00D62E04 /* B1013A1059.cpp */,
 				DF43902922EF140000AF8F9B /* B1020.cpp */,
 				DF43902B22EF20A900AF8F9B /* B1023.cpp */,
 				DF43902722EE7F6900AF8F9B /* A1025.cpp */,
@@ -201,6 +204,7 @@
 				DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */,
 				DF43902822EE7F6900AF8F9B /* A1025.cpp in Sources */,
 				DF43902A22EF140000AF8F9B /* B1020.cpp in Sources */,
+				DF7E224822F05D3D00D62E04 /* B1013A1059.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
