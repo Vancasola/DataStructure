@@ -218,10 +218,33 @@ void generatep(int index)
     }
 }
 /*
+int gcd(int a,int b)
+{
+    if(b==0)return a;
+    else return gcd(b,a%b);
+}
+int lcm(int a,int b)
+{
+    return (a/gcd(a,b))*b;
+}
 int main(void)
 {
-    n=3;
-    generatep(1);
+    int k=0,n=0;
+    int a=0,b=0;
+    while(scanf("%d",&k)!=EOF)
+    {
+        for(int j=0;j<k;j++)
+        {
+        scanf("%d",&n);
+        scanf("%d",&a);
+        for(int i=1;i<n;i++)
+        {
+            scanf("%d",&b);
+            a=lcm(a,b);
+        }
+        printf("%d\n",a);
+        }
+    }
     return 0;
 }
 */
