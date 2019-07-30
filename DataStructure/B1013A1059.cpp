@@ -5,10 +5,11 @@
 //  Created by vancsola on 2019/7/30.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 #include <math.h>
 int tbl[1000]={0};
+bool num[1000]={0};
 bool isPrime(int a)//untilize symetrical prime number-> O(sqrt(n))
 {
     if(a<=1)return false;
@@ -29,6 +30,21 @@ void findPrime(int n)
         }
     }
 }
+
+void filter(int n)
+{
+    num[2]=false;
+    for(int b=2;b<n;b++)
+    {
+        if(!num[b])
+        {
+            for(int i=2;i<=n/b;i++)
+            {
+                num[i*b]=true;
+            }
+        }
+    }
+}
 typedef struct
 {
     int num;
@@ -37,6 +53,13 @@ typedef struct
 dnum d[1000];
 int main(void)
 {
+    int n=50;
+    filter(n);
+    for(int i=2;i<n;i++)
+    {
+        if(!num[i])printf("%d ",i);
+    }
+    return 0;
     findPrime(1000);
     int num=0,a=0,j=0,i=0;
     bool flag = true;
@@ -81,3 +104,4 @@ int main(void)
     printf("%d^%d",d[i].num,d[i].cnt);
     return 0;
 }
+*/
