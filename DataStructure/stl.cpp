@@ -10,6 +10,7 @@
 #include <vector>
 #include <iostream>
 #include <set>
+#include <stack>
 #include <map>
 #include <queue>
 #include <unordered_map>
@@ -191,6 +192,7 @@ int main()
     return 0;
 }
 */
+/*
 int f(int n)
 {
     if(n==0||n==1)return 1;
@@ -218,6 +220,7 @@ void generatep(int index)
         }
     }
 }
+ */
 /*
 int gcd(int a,int b)
 {
@@ -295,7 +298,7 @@ struct Fruit
         return f1.price>f2.price;
     }
 };
-
+/*
 int main()
 {
     priority_queue<Fruit> qu;
@@ -314,3 +317,60 @@ int main()
     }
     return 0;
 }
+*/
+/*
+int main()
+{
+    stack <Fruit > s;
+    pair <string,int> p("abc",1);
+    for(int i=0;i<10;i++)
+    {
+        Fruit f;
+        string str = "banana";
+        f.name=str;
+        f.price = i;
+        s.push(f);
+    }
+    while(!s.empty())
+    {
+        printf("%d ",s.top().price);
+        s.pop();
+    }
+    printf("%s->%d\n",p.first.c_str(),p.second);
+    return 0;
+}
+*/
+/*
+int maxn = 1000;
+int n;
+int p[1000]={0};
+bool tbl[1000]={false};
+void gp(int index)
+{
+    
+    if(index==n+1)
+    {
+        for(int i=1;i<=n;i++)
+        {
+            printf("%d",p[i]);
+        }
+        putchar('\n');
+    }
+    for(int i=1;i<=n;i++)
+    {
+        if(!tbl[i])
+        {
+            tbl[i]=true;
+            p[index] = i;
+            gp(index+1);
+            tbl[i]=false;
+        }
+    }
+}
+int main(void)
+{
+    n=3;
+    gp(1);
+    return 0;
+}
+*/
