@@ -7,6 +7,7 @@
 //
 
 #include <stdio.h>
+#include <iostream>
 #include <algorithm>
 #include <stack>
 #include <queue>
@@ -30,52 +31,50 @@ bool isnum(char ch)
     if(ch>='0'&&ch<='9')return true;
     else return false;
 }
-void PrintQueue(queue<node> & q)
-{
-    node t;
-    while(!q.empty())
-    {
-        t = q.front();
-        if(t.isnum)
-            printf("%.lf",t.num);
-        else
-            printf("%c",t.oper);
-        
-        q.pop();
-    }
-}
-string Convertexp(string str)
+string Convertexp(string str, queue<node> &q)
 {
     node t;
     stack<node> op;
-    queue<node> q;
+    stack<char> tch;
     map<char,int> mp;
     mp['*']=1,mp['/']=1,mp['+']=0,mp['-']=0,mp['(']=2,mp[')']=-1;
     int len = str.length(), p = 1;
     bool firstnum=true;
     for(int i=0;i<len;i++)
     {
-        if(isnum(str[i]))
+        while(i<len&&isnum(str[i]))
         {
             if(firstnum)
             {
-                node n;
-                n.isnum = true;
-                n.num = str[i]-'0';
-                q.push(n);
-                p*=10;
+                tch.push(str[i]);
                 firstnum = false;
             }
             else
             {
-                q.back().num+=(str[i]-'0')*p;
-                p*=10;
+                tch.push(str[i]);
             }
+            i++;
         }
-        else//operator
+        if(!firstnum)
         {
+            node n;
+            n.isnum = true;
+            n.num = tch.top()-'0';
+            p*=10;
+            tch.pop();
+            q.push(n);
+            while(!tch.empty())
+            {
+                q.back().num+=(tch.top()-'0')*p;
+                p*=10;
+                tch.pop();
+            }
             firstnum = true;
             p = 1;
+        }
+        if(i>=len)break;
+        if(!isnum(str[i]))//operator
+        {
             if(op.empty())
             {
                 node n;
@@ -126,12 +125,108 @@ string Convertexp(string str)
         q.push(t);
         op.pop();
     }
-    PrintQueue(q);
     return str;
+}
+void PrintQueue(queue<node> q)
+{
+    node t;
+    while(!q.empty())
+    {
+        t = q.front();
+        if(t.isnum)
+            printf("%.lf",t.num);
+        else
+            printf("%c",t.oper);
+        
+        q.pop();
+    }
+    putchar('\n');
+}
+void PrintStack(stack<node> s)
+{
+    while(!s.empty())
+    {
+        printf("%.lf\n",s.top().num);
+        s.pop();
+    }
+}
+double Count(char ch, double a,double b)
+{
+    double r;
+    switch (ch) {
+        case '+':
+            r = a + b;
+            break;
+        case '-':
+            r = a - b;
+            break;
+        case '*':
+            r = a * b;
+            break;
+        case '/':
+            r = a / b;
+            break;
+        default:
+            break;
+    }
+    return r;
+}
+string filter(char s[])
+{
+    string ret = "";
+    int len = strlen(s);
+    for(int i=0;i<len;i++)
+    {
+        if(s[i]==' ')continue;
+        ret+=s[i];
+    }
+    return ret;
+}
+double Calculate(queue<node>q)
+{
+    node t;
+    double a,b,r;
+    char op;
+    stack<node> numstack;
+    while(!q.empty())
+    {
+        while(!q.empty()&&q.front().isnum)
+        {
+            //cout<<"size"<<q.size()<<endl;
+            t = q.front();
+            numstack.push(t);
+            q.pop();
+        }
+        //PrintQueue(q);
+        //PrintStack(numstack);
+        op = q.front().oper;
+        q.pop();
+        b = numstack.top().num;
+        numstack.pop();
+        a = numstack.top().num;
+        numstack.pop();
+        r = Count(op,a,b);
+        t.isnum = true;
+        t.num = r;
+        numstack.push(t);
+    }
+    return numstack.top().num;
 }
 int main()
 {
     string str = "1+2-1*((3+4)/5-6)+7";
-    Convertexp(str);
+    char s[1000], test;
+    while(scanf("%c",&test)!=EOF)
+    {
+        if(test=='0')break;
+        if(test=='\0'||test==' '||test=='\n')continue;
+        s[0] = test;
+        gets(s+1);
+        str = filter(s);
+        queue<node> q;
+        Convertexp(str,q);
+        //PrintQueue(q);
+        printf("%.2lf",Calculate(q));
+    }
     return 0;
 }
