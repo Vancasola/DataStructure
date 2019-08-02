@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/8/2.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 #include <math.h>
 struct node
@@ -42,3 +42,4 @@ int main()
     printf("%d",-1);
     return 0;
 }
+*/
