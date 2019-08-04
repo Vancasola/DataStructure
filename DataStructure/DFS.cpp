@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/8/3.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 int n,v,maxV;
 int w[1000]={0},c[1000]={0};
@@ -41,3 +41,4 @@ int main(){
     printf("%d",maxV);
     return 0;
 }
+*/
