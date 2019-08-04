@@ -121,6 +121,7 @@ int main()
 ...T.
 2 2 4 3
  */
+/*
 #include <stdio.h>
 #include <queue>
 using namespace std;
@@ -132,6 +133,10 @@ int X[4] = {0,0,-1,1};
 int Y[4] = {1,-1,0,0};
 bool inq[maxn][maxn]={false};
 char road[maxn][maxn];
+struct Node {
+    int x,y;
+    int setp;
+};
 bool judge(int x,int y)
 {
     if(x<0||y<0||x>=n||y>=m)return false;
@@ -158,6 +163,41 @@ void dfs(int x,int y,int sum)
         }
     }
 }
+void bfs(int x,int y)
+{
+    queue<Node> q;
+    Node n,top;
+    n.x=x;
+    n.y=y;
+    n.setp=0;
+    q.push(n);
+    int newa,newb;
+    int sum=0;
+    while(!q.empty())
+    {
+        top = q.front();
+        sum++;
+        if(top.x==Tx&&top.y==Ty)
+        {
+            if(top.setp<minv)minv=top.setp;
+        }
+        q.pop();
+        for(int i=0;i<4;i++)
+        {
+            newa = top.x+X[i];
+            newb = top.y+Y[i];
+            if(judge(newa, newb))
+            {
+                n.x=newa;
+                n.y=newb;
+                n.setp=top.setp+1;
+                q.push(n);
+                inq[newa][newb]=true;
+                //printf("%d",sum);
+            }
+        }
+    }
+}
 int main()
 {
     scanf("%d%d",&n,&m);
@@ -165,22 +205,13 @@ int main()
     {
         getchar();
         for(int j=0;j<m;j++)
-        {
             road[i][j] = getchar();
-        }
     }
     scanf("%d%d%d%d",&Sx,&Sy,&Tx,&Ty);
-    /*for(int i=0;i<n;i++)
-    {
-        for(int j=0;j<m;j++)
-        {
-            printf("%c",road[i][j]);
-        }
-    }*/
-    for(int i=0;i<n;i++)
-    {
-        dfs(Sx, Sy, 0);
-    }
+    int sum=0;
+    
+    bfs(Sx,Sy);
     printf("%d",minv);
     return 0;
 }
+*/
