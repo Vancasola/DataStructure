@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/8/7.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 #include <vector>
 #include <stack>
@@ -74,14 +74,7 @@ int main()
             Node[id].child.push_back(data);
         }
     }
-    /*for(i=0;i<N;i++)
-    {
-        for(vector<int>::iterator it=Node[i].child.begin();it!=Node[i].child.end();it++)
-        {
-            printf("%d ",*it);
-        }
-        printf("\n");
-    }*/
+
     dfs(Node[0].data,Node[0],q);
     if(ind!=0)
     {
@@ -98,7 +91,7 @@ int main()
     return 0;
 }
 
-
+*/
 /*
 4 1 2
 1 1 1 1
