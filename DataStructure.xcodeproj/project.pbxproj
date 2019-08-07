@@ -12,6 +12,7 @@
 		DF43902822EE7F6900AF8F9B /* A1025.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF43902722EE7F6900AF8F9B /* A1025.cpp */; };
 		DF43902A22EF140000AF8F9B /* B1020.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF43902922EF140000AF8F9B /* B1020.cpp */; };
 		DF43902C22EF20A900AF8F9B /* B1023.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF43902B22EF20A900AF8F9B /* B1023.cpp */; };
+		DF4B724522F6E3B900645E34 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF4B724422F6E3B900645E34 /* Tree.cpp */; };
 		DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF5E99AC22A2AD6D00954903 /* main.cpp */; };
 		DF6C1D4D22CF363100B3760D /* B1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D4B22CF363100B3760D /* B1001.cpp */; };
 		DF6C1D4F22CF3A8200B3760D /* B1032.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D4E22CF3A8200B3760D /* B1032.cpp */; };
@@ -27,6 +28,7 @@
 		DF7E224622F03DAA00D62E04 /* fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF7E224522F03DAA00D62E04 /* fraction.cpp */; };
 		DF7E224822F05D3D00D62E04 /* B1013A1059.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF7E224722F05D3D00D62E04 /* B1013A1059.cpp */; };
 		DF7E224A22F1832C00D62E04 /* caculator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF7E224922F1832C00D62E04 /* caculator.cpp */; };
+		DF86D29922FAC13E00797FE6 /* 1053.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF86D29822FAC13E00797FE6 /* 1053.cpp */; };
 		DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF8BB9C922A2B1990019739A /* SeqList.cpp */; };
 		DF9C90F222F672B20017F269 /* BFS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF9C90F122F672B20017F269 /* BFS.cpp */; };
 		DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */; };
@@ -54,6 +56,7 @@
 		DF43902722EE7F6900AF8F9B /* A1025.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1025.cpp; sourceTree = "<group>"; };
 		DF43902922EF140000AF8F9B /* B1020.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1020.cpp; sourceTree = "<group>"; };
 		DF43902B22EF20A900AF8F9B /* B1023.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1023.cpp; sourceTree = "<group>"; };
+		DF4B724422F6E3B900645E34 /* Tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Tree.cpp; sourceTree = "<group>"; };
 		DF5E99A922A2AD6D00954903 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5E99AC22A2AD6D00954903 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		DF6C1D4B22CF363100B3760D /* B1001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1001.cpp; sourceTree = "<group>"; };
@@ -70,6 +73,7 @@
 		DF7E224522F03DAA00D62E04 /* fraction.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fraction.cpp; sourceTree = "<group>"; };
 		DF7E224722F05D3D00D62E04 /* B1013A1059.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1013A1059.cpp; sourceTree = "<group>"; };
 		DF7E224922F1832C00D62E04 /* caculator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = caculator.cpp; sourceTree = "<group>"; };
+		DF86D29822FAC13E00797FE6 /* 1053.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 1053.cpp; sourceTree = "<group>"; };
 		DF8BB9C922A2B1990019739A /* SeqList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SeqList.cpp; sourceTree = "<group>"; };
 		DF8BB9CA22A2B1990019739A /* SeqList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SeqList.hpp; sourceTree = "<group>"; };
 		DF9C90F122F672B20017F269 /* BFS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BFS.cpp; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 		DF5E99A022A2AD6D00954903 = {
 			isa = PBXGroup;
 			children = (
+				DF86D29822FAC13E00797FE6 /* 1053.cpp */,
 				DF5E99AB22A2AD6D00954903 /* DataStructure */,
 				DF5E99AA22A2AD6D00954903 /* Products */,
 			);
@@ -122,6 +127,7 @@
 				DF1CF85C22F45DDB0058FA16 /* A1032.cpp */,
 				DFC2191922F5CB5800637DC4 /* DFS.cpp */,
 				DF9C90F122F672B20017F269 /* BFS.cpp */,
+				DF4B724422F6E3B900645E34 /* Tree.cpp */,
 				DF6C5F0122F47AEF00EE656F /* A1052.cpp */,
 				DF7E224322EFF53D00D62E04 /* c1928.cpp */,
 				DF7E224522F03DAA00D62E04 /* fraction.cpp */,
@@ -199,11 +205,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4B724522F6E3B900645E34 /* Tree.cpp in Sources */,
 				DF70B1DB22EDC75B00C7B22D /* B1022.cpp in Sources */,
 				DF70B1D722ED9ADE00C7B22D /* sort.cpp in Sources */,
 				DF43902C22EF20A900AF8F9B /* B1023.cpp in Sources */,
 				DF9C90F222F672B20017F269 /* BFS.cpp in Sources */,
 				DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */,
+				DF86D29922FAC13E00797FE6 /* 1053.cpp in Sources */,
 				DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */,
 				DFD7445722EF3EAD00D6C685 /* B1019A1069.cpp in Sources */,
 				DF7E224422EFF53D00D62E04 /* c1928.cpp in Sources */,
