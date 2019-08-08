@@ -34,6 +34,7 @@
 		DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF8BB9C922A2B1990019739A /* SeqList.cpp */; };
 		DF9C90F222F672B20017F269 /* BFS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF9C90F122F672B20017F269 /* BFS.cpp */; };
 		DFA057C522FC0D9500B84ECD /* huffman tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA057C422FC0D9500B84ECD /* huffman tree.cpp */; };
+		DFA057C722FC574A00B84ECD /* graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA057C622FC574A00B84ECD /* graph.cpp */; };
 		DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */; };
 		DFC2191A22F5CB5800637DC4 /* DFS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFC2191922F5CB5800637DC4 /* DFS.cpp */; };
 		DFD7445522EF2FDE00D6C685 /* B1040A1093.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD7445422EF2FDE00D6C685 /* B1040A1093.cpp */; };
@@ -85,6 +86,7 @@
 		DF8BB9CA22A2B1990019739A /* SeqList.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SeqList.hpp; sourceTree = "<group>"; };
 		DF9C90F122F672B20017F269 /* BFS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BFS.cpp; sourceTree = "<group>"; };
 		DFA057C422FC0D9500B84ECD /* huffman tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "huffman tree.cpp"; sourceTree = "<group>"; };
+		DFA057C622FC574A00B84ECD /* graph.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = graph.cpp; sourceTree = "<group>"; };
 		DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
 		DFAAC5AF22B0E8DA00DF0EF0 /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		DFC2191922F5CB5800637DC4 /* DFS.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DFS.cpp; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				DF43902722EE7F6900AF8F9B /* A1025.cpp */,
+				DFA057C622FC574A00B84ECD /* graph.cpp */,
 				DFDF935F22FBFDC700617FB5 /* heap.cpp */,
 				DFA057C422FC0D9500B84ECD /* huffman tree.cpp */,
 				DFDC37BE22FBC43D00642902 /* AVL.cpp */,
@@ -252,6 +255,7 @@
 				DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */,
 				DF43902822EE7F6900AF8F9B /* A1025.cpp in Sources */,
 				DF43902A22EF140000AF8F9B /* B1020.cpp in Sources */,
+				DFA057C722FC574A00B84ECD /* graph.cpp in Sources */,
 				DF7E224822F05D3D00D62E04 /* B1013A1059.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
