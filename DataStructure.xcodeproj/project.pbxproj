@@ -38,6 +38,7 @@
 		DFD7445522EF2FDE00D6C685 /* B1040A1093.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD7445422EF2FDE00D6C685 /* B1040A1093.cpp */; };
 		DFD7445722EF3EAD00D6C685 /* B1019A1069.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD7445622EF3EAD00D6C685 /* B1019A1069.cpp */; };
 		DFDC37BF22FBC43D00642902 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDC37BE22FBC43D00642902 /* AVL.cpp */; };
+		DFDF936022FBFDC700617FB5 /* heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDF935F22FBFDC700617FB5 /* heap.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -88,6 +89,7 @@
 		DFD7445422EF2FDE00D6C685 /* B1040A1093.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1040A1093.cpp; sourceTree = "<group>"; };
 		DFD7445622EF3EAD00D6C685 /* B1019A1069.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1019A1069.cpp; sourceTree = "<group>"; };
 		DFDC37BE22FBC43D00642902 /* AVL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AVL.cpp; sourceTree = "<group>"; };
+		DFDF935F22FBFDC700617FB5 /* heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heap.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				DF43902722EE7F6900AF8F9B /* A1025.cpp */,
+				DFDF935F22FBFDC700617FB5 /* heap.cpp */,
 				DFDC37BE22FBC43D00642902 /* AVL.cpp */,
 				DF4D870722FB1D7100EBBED3 /* disjoint set.cpp */,
 				DF1CF85C22F45DDB0058FA16 /* A1032.cpp */,
@@ -241,6 +244,7 @@
 				DF4D870822FB1D7100EBBED3 /* disjoint set.cpp in Sources */,
 				DF7E224622F03DAA00D62E04 /* fraction.cpp in Sources */,
 				DF6C1D5322CF467700B3760D /* B1036.cpp in Sources */,
+				DFDF936022FBFDC700617FB5 /* heap.cpp in Sources */,
 				DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */,
 				DF43902822EE7F6900AF8F9B /* A1025.cpp in Sources */,
 				DF43902A22EF140000AF8F9B /* B1020.cpp in Sources */,
