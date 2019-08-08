@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/8/7.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 void init(int f[],int n)
 {
@@ -60,3 +60,4 @@ int main(void)
     printf("\n%d",ans);
     return 0;
 }
+*/
