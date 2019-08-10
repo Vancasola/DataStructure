@@ -5,10 +5,11 @@
 //  Created by vancasola on 2019/8/8.
 //  Copyright © 2019 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 #include<vector>
 using namespace std;
+ */
 /*
 int n=0;
 const int maxn=1000,inf = 999999;
@@ -36,6 +37,7 @@ void DFSTrave()
     }
     return;
 }*/
+/*
 int n;
 const int maxn = 1000;
 vector<int> Adj[maxn];
@@ -70,3 +72,4 @@ int main()
 {
     return 0;
 }
+*/
