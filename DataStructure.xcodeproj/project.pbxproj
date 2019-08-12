@@ -42,6 +42,7 @@
 		DFD7445722EF3EAD00D6C685 /* B1019A1069.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD7445622EF3EAD00D6C685 /* B1019A1069.cpp */; };
 		DFDC37BF22FBC43D00642902 /* AVL.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDC37BE22FBC43D00642902 /* AVL.cpp */; };
 		DFDF936022FBFDC700617FB5 /* heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDF935F22FBFDC700617FB5 /* heap.cpp */; };
+		DFFCA7482301A0B000AC9CF3 /* A1076.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFCA7472301A0B000AC9CF3 /* A1076.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -96,6 +97,7 @@
 		DFD7445622EF3EAD00D6C685 /* B1019A1069.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1019A1069.cpp; sourceTree = "<group>"; };
 		DFDC37BE22FBC43D00642902 /* AVL.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AVL.cpp; sourceTree = "<group>"; };
 		DFDF935F22FBFDC700617FB5 /* heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heap.cpp; sourceTree = "<group>"; };
+		DFFCA7472301A0B000AC9CF3 /* A1076.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1076.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				DF43902722EE7F6900AF8F9B /* A1025.cpp */,
 				DF188E3622FEE86000E89EC2 /* A1034.cpp */,
+				DFFCA7472301A0B000AC9CF3 /* A1076.cpp */,
 				DFA057C622FC574A00B84ECD /* graph.cpp */,
 				DFDF935F22FBFDC700617FB5 /* heap.cpp */,
 				DFA057C422FC0D9500B84ECD /* huffman tree.cpp */,
@@ -231,6 +234,7 @@
 				DF70B1D722ED9ADE00C7B22D /* sort.cpp in Sources */,
 				DF43902C22EF20A900AF8F9B /* B1023.cpp in Sources */,
 				DF9C90F222F672B20017F269 /* BFS.cpp in Sources */,
+				DFFCA7482301A0B000AC9CF3 /* A1076.cpp in Sources */,
 				DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */,
 				DF86D29922FAC13E00797FE6 /* A1053.cpp in Sources */,
 				DF8BB9CB22A2B1990019739A /* SeqList.cpp in Sources */,
