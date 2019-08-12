@@ -232,3 +232,184 @@ HHH FFF 10
 AAA BBB 10
 HHH GGG 30
  */
+/*
+#include<stdio.h>
+#include <iostream>
+#include <map>
+#include <algorithm>
+#include <string>
+using namespace std;
+const int MAXN = 2010, INF = 9999999999;
+map<int, string> ItoS;
+map<string, int> StoI;
+map<string, int> gang;
+int G[MAXN][MAXN] = {0}, weight[MAXN] = {0};
+int n,k,numperson = 0;
+bool vis[MAXN] = {false};
+void DFS(int nowvisit,int& head ,int& num ,int& total)
+{
+    vis[nowvisit] = true;
+    num++;
+    if(weight[nowvisit]>weight[head]){head = nowvisit;}
+    
+    for(int i=0;i<numperson;i++)
+    {
+        if(G[nowvisit][i]>0)
+        {
+            total+=G[nowvisit][i];
+            G[nowvisit][i] = 0;
+            G[i][nowvisit] = 0;
+            if(vis[i]==false)
+            {
+                DFS(i, head, num, total);
+            }
+        }
+    }
+}
+void DFSTrave()
+{
+    for(int i=0;i<numperson;i++)
+    {
+        if(vis[i]==false)
+        {
+            int head=i, num=0, total = 0;
+            DFS(i,head,num,total);
+            if(num>2&&total>k)
+            {
+                gang[ItoS[head]]=num;
+            }
+        }
+    }
+}
+int change(string str)
+{
+    if(StoI.find(str)!=StoI.end())
+    {
+        return StoI[str];
+    }
+    else
+    {
+        StoI[str] = numperson;
+        ItoS[numperson] = str;
+        return numperson++;
+    }
+}
+ 
+int main()
+{
+    int w;
+    string str1,str2;
+    cin>>n>>k;
+    int id1, id2;
+    for(int i=0;i<n;i++)
+    {
+        cin>>str1>>str2>>w;
+        id1 = change(str1);
+        id2 = change(str2);
+        weight[id1] += w;
+        weight[id2] += w;
+        G[id1][id2] += w;
+        G[id2][id1] += w;
+    }
+    DFSTrave();
+    cout<< gang.size()<<endl;
+    for(map<string,int>::iterator it = gang.begin();it!=gang.end();it++)
+    {
+        cout<<it->first<<' '<<it->second<<endl;
+    }
+    return 0;
+}
+*/
+/*
+#include<stdio.h>
+#include <iostream>
+#include <map>
+#include <algorithm>
+#include <string>
+using namespace std;
+const int MAXN =2010, INF= 999999999;
+int G[MAXN][MAXN] = {0};
+bool vis[MAXN] = {false};
+int numid=0;
+int thresh = 0;
+map<string,int> strtoi;
+map<int,string> itostr;
+int weight[MAXN] = {0};
+map<string,int> gang;
+void DFS(int x,int& head,int &numperson,int &wei)
+{
+    //cout<<itostr[x]<<' '<<weight[x]<<endl;
+    vis[x] = true;
+    numperson++;
+    if(weight[x]>weight[head])
+    {
+        head = x;
+    }
+    for(int i=0;i<numid;i++)
+    {
+        if(G[x][i]!=0)
+        {
+            wei += G[x][i];
+            G[i][x] = 0;
+            G[x][i] = 0;
+            if(vis[i]==false)
+            {
+                DFS(i,head,numperson,wei);
+            }
+        }
+    }
+}
+
+void DFSTrav()
+{
+    int numperson = 0,head = 0,wei = 0;
+    for(int i=0;i<numid;i++)
+    {
+        if(vis[i]==false)
+        {
+            numperson = 0,head = i,wei = 0;
+            DFS(i,head, numperson, wei);
+            //cout<<"numperson "<<numperson<<"wei "<<wei<<endl;
+            if(numperson>2&&wei>thresh)
+                gang[itostr[head]]=numperson;
+        }
+    }
+}
+int change(string& str)
+{
+    if(strtoi.find(str)!=strtoi.end())
+    {
+        return strtoi[str];
+    }
+    else
+    {
+        strtoi[str]=numid;
+        itostr[numid]=str;
+        return numid++;
+    }
+}
+int main()
+{
+    int n,w,id1,id2;
+    string str1,str2;
+    scanf("%d %d",&n,&thresh);
+    for(int i=0;i<n;i++)
+    {
+        cin>>str1>>str2>>w;
+        id1=change(str1);
+        id2=change(str2);
+        G[id1][id2] += w;
+        G[id2][id1] += w;
+        weight[id1] += w;
+        weight[id2] += w;
+    }
+    DFSTrav();
+    cout<<gang.size()<<endl;
+    for(map<string,int>::iterator it = gang.begin();it!=gang.end();it++)
+    {
+        cout<<it->first<<' '<<it->second<<endl;
+    }
+    
+    return 0;
+}
+*/
