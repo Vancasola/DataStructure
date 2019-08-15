@@ -45,6 +45,7 @@
 		DFDF936022FBFDC700617FB5 /* heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDF935F22FBFDC700617FB5 /* heap.cpp */; };
 		DFE372EB23044A7A004D4A06 /* A1003.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE372EA23044A7A004D4A06 /* A1003.cpp */; };
 		DFE372ED2305836C004D4A06 /* A1030.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE372EC2305836C004D4A06 /* A1030.cpp */; };
+		DFE372EF2305A14C004D4A06 /* Bellman Ford.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE372EE2305A14C004D4A06 /* Bellman Ford.cpp */; };
 		DFFCA7482301A0B000AC9CF3 /* A1076.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFCA7472301A0B000AC9CF3 /* A1076.cpp */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,7 @@
 		DFDF935F22FBFDC700617FB5 /* heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heap.cpp; sourceTree = "<group>"; };
 		DFE372EA23044A7A004D4A06 /* A1003.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1003.cpp; sourceTree = "<group>"; };
 		DFE372EC2305836C004D4A06 /* A1030.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1030.cpp; sourceTree = "<group>"; };
+		DFE372EE2305A14C004D4A06 /* Bellman Ford.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Bellman Ford.cpp"; sourceTree = SOURCE_ROOT; };
 		DFFCA7472301A0B000AC9CF3 /* A1076.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1076.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				DF43902722EE7F6900AF8F9B /* A1025.cpp */,
 				DFE372EA23044A7A004D4A06 /* A1003.cpp */,
 				DFE372EC2305836C004D4A06 /* A1030.cpp */,
+				DFE372EE2305A14C004D4A06 /* Bellman Ford.cpp */,
 				DF188E3622FEE86000E89EC2 /* A1034.cpp */,
 				DFFCA7472301A0B000AC9CF3 /* A1076.cpp */,
 				DFDEB32B2302EA010016C545 /* dijkstra.cpp */,
@@ -261,6 +264,7 @@
 				DF6C1D5522CF528500B3760D /* c5901.cpp in Sources */,
 				DFDC37BF22FBC43D00642902 /* AVL.cpp in Sources */,
 				DF70B1D522ED941100C7B22D /* B1009.cpp in Sources */,
+				DFE372EF2305A14C004D4A06 /* Bellman Ford.cpp in Sources */,
 				DFC2191A22F5CB5800637DC4 /* DFS.cpp in Sources */,
 				DF37255122A2C44E004A1536 /* LinkList.cpp in Sources */,
 				DFD7445522EF2FDE00D6C685 /* B1040A1093.cpp in Sources */,
