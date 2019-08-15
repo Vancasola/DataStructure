@@ -82,7 +82,7 @@
  return 0;
  }
  */
-
+/*
 #include <stdio.h>
 #include <algorithm>
 #include <iostream>
@@ -179,3 +179,4 @@ int main()
     cout<<num[dst]<<' '<<w[dst]<<endl;
     return 0;
 }
+*/

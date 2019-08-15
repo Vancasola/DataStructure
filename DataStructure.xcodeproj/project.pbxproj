@@ -44,6 +44,7 @@
 		DFDEB32C2302EA010016C545 /* dijkstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDEB32B2302EA010016C545 /* dijkstra.cpp */; };
 		DFDF936022FBFDC700617FB5 /* heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDF935F22FBFDC700617FB5 /* heap.cpp */; };
 		DFE372EB23044A7A004D4A06 /* A1003.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE372EA23044A7A004D4A06 /* A1003.cpp */; };
+		DFE372ED2305836C004D4A06 /* A1030.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE372EC2305836C004D4A06 /* A1030.cpp */; };
 		DFFCA7482301A0B000AC9CF3 /* A1076.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFCA7472301A0B000AC9CF3 /* A1076.cpp */; };
 /* End PBXBuildFile section */
 
@@ -101,6 +102,7 @@
 		DFDEB32B2302EA010016C545 /* dijkstra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dijkstra.cpp; sourceTree = SOURCE_ROOT; };
 		DFDF935F22FBFDC700617FB5 /* heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heap.cpp; sourceTree = "<group>"; };
 		DFE372EA23044A7A004D4A06 /* A1003.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1003.cpp; sourceTree = "<group>"; };
+		DFE372EC2305836C004D4A06 /* A1030.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1030.cpp; sourceTree = "<group>"; };
 		DFFCA7472301A0B000AC9CF3 /* A1076.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1076.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +138,7 @@
 			children = (
 				DF43902722EE7F6900AF8F9B /* A1025.cpp */,
 				DFE372EA23044A7A004D4A06 /* A1003.cpp */,
+				DFE372EC2305836C004D4A06 /* A1030.cpp */,
 				DF188E3622FEE86000E89EC2 /* A1034.cpp */,
 				DFFCA7472301A0B000AC9CF3 /* A1076.cpp */,
 				DFDEB32B2302EA010016C545 /* dijkstra.cpp */,
@@ -273,6 +276,7 @@
 				DFA057C722FC574A00B84ECD /* graph.cpp in Sources */,
 				DF7E224822F05D3D00D62E04 /* B1013A1059.cpp in Sources */,
 				DFE372EB23044A7A004D4A06 /* A1003.cpp in Sources */,
+				DFE372ED2305836C004D4A06 /* A1030.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
