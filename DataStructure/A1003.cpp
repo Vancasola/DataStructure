@@ -180,3 +180,99 @@ int main()
     return 0;
 }
 */
+/*
+#include<iostream>
+#include<stdio.h>
+#include<map>
+#include<vector>
+using namespace std;
+int N,E,S,D;
+const int MAXN = 510,INF = 0x3fffffff;
+int G[MAXN][MAXN];
+int d[MAXN] = {0};
+int weight[MAXN] = {0};
+int vis[MAXN] = {false};
+vector<int > pre[MAXN];
+vector<int > tmp;
+vector<int > ans;
+int num=0,numperson=0;
+void dijsktra(int src)
+{
+    fill(d,d+MAXN,INF);
+    fill(vis,vis+MAXN,false);
+    d[src] = 0;
+    for(int i=0;i<N;i++)
+    {
+        int MIN = INF, u=-1;
+        for(int j=0;j<N;j++)
+        {
+            if(vis[j]==false&&d[j]<MIN)
+            {
+                u=j;
+                MIN = d[j];
+            }
+        }
+        if(u==-1)return;
+        vis[u]=true;
+        for(int v=0;v<N;v++)
+        {
+            if(vis[v]==false&&G[u][v]!=INF)
+            {
+                if(d[v]>d[u]+G[u][v])
+                {
+                    d[v] = d[u] + G[u][v];
+                    pre[v].clear();
+                    pre[v].push_back(u);
+                }else if(d[v]==d[u]+G[u][v])
+                {
+                    pre[v].push_back(u);
+                }
+            }
+        }
+    }
+}
+void DFS(int u)
+{
+    if(u==S)
+    {
+        int nump=0;
+        tmp.push_back(u);
+        num++;
+        for(int i=tmp.size()-1;i>=0;i--)
+        {
+            cout<<tmp[i]<<' ';
+            nump+=weight[tmp[i]];
+        }
+        cout<<endl;
+        if(nump>numperson) numperson = nump;
+        tmp.pop_back();
+        return;
+    }
+    tmp.push_back(u);
+    for(int i=0;i<pre[u].size();i++)
+    {
+        DFS(pre[u][i]);
+    }
+    tmp.pop_back();
+}
+int main()
+{
+    cin>>N>>E>>S>>D;
+    fill(G[0],G[0]+MAXN*MAXN,INF);
+    int a,b,w;
+    for(int i=0;i<N;i++)
+    {
+        cin>>weight[i];
+    }
+    for(int i=0;i<E;i++)
+    {
+        cin>>a>>b>>w;
+        G[a][b] = G[b][a] = w;
+        
+    }
+    dijsktra(S);
+    DFS(D);
+    cout<<num<<' '<<numperson<<endl;
+    return 0;
+}
+*/
