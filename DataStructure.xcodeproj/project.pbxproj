@@ -50,6 +50,7 @@
 		DFE372ED2305836C004D4A06 /* A1030.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE372EC2305836C004D4A06 /* A1030.cpp */; };
 		DFE372EF2305A14C004D4A06 /* Bellman Ford.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFE372EE2305A14C004D4A06 /* Bellman Ford.cpp */; };
 		DFFCA7482301A0B000AC9CF3 /* A1076.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFCA7472301A0B000AC9CF3 /* A1076.cpp */; };
+		DFFF017C230C3D0D000614C1 /* kruscal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFF017B230C3D0D000614C1 /* kruscal.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -112,6 +113,7 @@
 		DFE372EC2305836C004D4A06 /* A1030.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1030.cpp; sourceTree = "<group>"; };
 		DFE372EE2305A14C004D4A06 /* Bellman Ford.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "Bellman Ford.cpp"; sourceTree = SOURCE_ROOT; };
 		DFFCA7472301A0B000AC9CF3 /* A1076.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1076.cpp; sourceTree = "<group>"; };
+		DFFF017B230C3D0D000614C1 /* kruscal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kruscal.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				DF93023B230C0D0D0089EBB9 /* SPFA.cpp */,
 				DF93023D230C19D00089EBB9 /* floyd.cpp */,
 				DF93023F230C25670089EBB9 /* prim.cpp */,
+				DFFF017B230C3D0D000614C1 /* kruscal.cpp */,
 				DF188E3622FEE86000E89EC2 /* A1034.cpp */,
 				DFFCA7472301A0B000AC9CF3 /* A1076.cpp */,
 				DFDEB32B2302EA010016C545 /* dijkstra.cpp */,
@@ -283,6 +286,7 @@
 				DF1CF85D22F45DDB0058FA16 /* A1032.cpp in Sources */,
 				DF4D870822FB1D7100EBBED3 /* disjoint set.cpp in Sources */,
 				DF7E224622F03DAA00D62E04 /* fraction.cpp in Sources */,
+				DFFF017C230C3D0D000614C1 /* kruscal.cpp in Sources */,
 				DF6C1D5322CF467700B3760D /* B1036.cpp in Sources */,
 				DFDF936022FBFDC700617FB5 /* heap.cpp in Sources */,
 				DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */,
