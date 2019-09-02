@@ -500,3 +500,96 @@ int main()
     
 }
 */
+//8:48-9:11 9.39-9.44 10:30-10:50 23+15+20
+/*
+#include<iostream>
+#include<stdio.h>
+#include<map>
+#include<algorithm>
+#include<string>
+#include<vector>
+using namespace std;
+const int MAXN = 2010,INF = 0x3fffffff;
+int G[MAXN][MAXN]={0};
+int weight[MAXN]={0};
+bool vis[MAXN]={false};
+int N,K;
+map<string,int> Stoi;
+map<int,string> Itos;
+int num=0;
+void DFS(int u,int &head,int &numperson,int &total)
+{
+    if(vis[u]==false)
+    {
+        total += weight[u];
+        numperson++;
+        if(weight[u]>weight[head])head = u;
+        vis[u] = true;
+    }
+    for(int v=0;v<N;v++)
+    {
+        if(vis[v]==false&&G[u][v]!=0)
+        {
+            DFS(v,head,numperson,total);
+        }
+    }
+}
+int DFSTrave()
+{
+    int gangnum=0;
+    map<string,int> gang;
+    for(int i=0;i<N;i++)
+    {
+        int head, numperson=0,total=0;
+        if(vis[i]==false)
+        {
+            head = i;
+            numperson = total = 0;
+            DFS(i,head,numperson,total);
+            total/=2;
+            //cout<<Itos[head]<<' '<<numperson<<' '<<total<<endl;
+            if(numperson>2&&total>K)
+            {
+                gangnum++;
+                //cout<<Itos[head]<<endl;
+                gang[Itos[head]] = numperson;
+            }
+        }
+    }
+    cout<<gangnum<<endl;
+    for(map<string,int>::iterator it=gang.begin();it!=gang.end();it++)
+    {
+        cout<<it->first<<' '<<it->second<<endl;
+    }
+    
+    return gangnum;
+}
+int convert(string str)
+{
+    if(Stoi.find(str)==Stoi.end())
+    {
+        Stoi[str] = num;
+        Itos[num] = str;
+        num++;
+    }
+    return Stoi[str];
+}
+int main()
+{
+    cin>>N>>K;
+    string str1, str2;
+    int w, id1, id2;
+    for(int i=0;i<N;i++)
+    {
+        cin>>str1>>str2>>w;
+        id1 = convert(str1);
+        id2 = convert(str2);
+        G[id1][id2]+= w;
+        G[id2][id1]+= w;
+        weight[id1]+=w;
+        weight[id2]+=w;
+    }
+    DFSTrave();
+    return 0;
+}
+*/

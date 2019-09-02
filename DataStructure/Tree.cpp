@@ -202,6 +202,7 @@ node* create(int postL, int postR, int inL, int inR)
     root->rchild= create(postL+numL,postR-1,i+1,inR);
     return root;
 }
+ 
 void Layerorder(node* root)
 {
     queue<node*> q;
@@ -230,4 +231,75 @@ int main()
     Layerorder(root);
     return 0;
 }
+*/
+/*
+#include<iostream>
+#include<stdio.h>
+#include <queue>
+using namespace std;
+struct node
+{
+    int data;
+    node * lc,*rc;
+};
+int n,in[35],post[35],pre[35];
+node* create(int preL,int preR,int inL,int inR)
+{
+    if(preL>preR)
+    {
+        return NULL;
+    }
+    node* root = new node;
+    root->data = pre[preL];
+    int i;
+    for(i = inL;i<=inR;i++)
+    {
+        if(in[i]==pre[preL])break;
+    }
+    int numL = i-inL;
+    root->lc = create(preL+1,preL+numL,inL,i-1);
+    root->rc = create(preL+numL+1,preR,i+1,inR);
+    return root;
+}
+int num =0 ;
+void layerorder(node *root)
+{
+    queue<node*> q;
+    q.push(root);
+    while(!q.empty())
+    {
+        node * no = q.front();
+        q.pop();
+        if(num<n-1)cout<<no->data<<' ';
+        else if (num ==n-1)cout<<no->data;
+        num++;
+        if(no->lc!=NULL)q.push(no->lc);
+        if(no->rc!=NULL)q.push(no->rc);
+    }
+}
+void preorder(node* root)
+{
+    if(root==NULL)return;
+    cout<<root->data<<' ';
+    preorder(root->lc);
+    preorder(root->rc);
+}
+
+int main()
+{
+    cin>>n;
+    for(int i=0;i<n;i++)cin>>pre[i];
+    for(int i=0;i<n;i++)cin>>in[i];
+    node * root = create(0,n-1,0,n-1);
+    layerorder(root);
+    cout<<endl;
+    preorder(root);
+    return 0;
+}*/
+/*
+7
+4 1 3 2 6 5 7
+1 2 3 4 5 6 7
+
+4 1 6 3 5 7 2
 */

@@ -115,3 +115,105 @@ int main()
     return 0;
 }
 */
+//10:03-10:24-10:32
+/*
+#include<iostream>
+#include<stdio.h>
+#include<algorithm>
+#include<vector>
+#include<stack>
+using namespace std;
+const int MAXN = 510, INF = 0x3ffffff;
+int G[MAXN][MAXN] ;
+bool vis[MAXN]={false};
+int d[MAXN];
+int n,e,S,D;
+int a,b,w,c;
+vector<int> pre[MAXN];
+vector<int> tmp;
+int cost[MAXN][MAXN]={0};
+void dijkstra(int src)
+{
+    fill(d,d+MAXN,INF);
+    d[src]=0;
+    for(int i=0;i<n;i++)
+    {
+        int MIN = INF, u = -1;
+        for(int j=0;j<n;j++)
+        {
+            if(vis[j]==false&&d[j]<MIN)
+            {
+                MIN = d[j];
+                u=j;
+            }
+        }
+        if(u==-1)return;
+        vis[u] = true;
+        for(int v=0;v<n;v++)
+        {
+            if(vis[v]==false&&G[u][v]!=INF)
+            {
+                if(d[u]+G[u][v]<d[v])
+                {
+                    d[v] = d[u]+G[u][v];
+                    pre[v].clear();
+                    pre[v].push_back( u);
+                }
+                else if(d[u]+G[u][v]==d[v])
+                {
+                    pre[v].push_back( u);
+                }
+            }
+        }
+    }
+}
+vector<int> ans;
+int MINCOST=INF;
+void DFS(int u)
+{
+    if(u==S)
+    {
+        tmp.push_back(u);
+        int tmpcost=0;
+        for(int i=0;i<tmp.size()-1;i++)
+        {
+            tmpcost+= cost[tmp[i]][tmp[i+1]];
+        }
+        if(tmpcost<MINCOST)
+        {
+            ans = tmp;
+            MINCOST = tmpcost;
+        }
+        tmp.pop_back();
+        return;
+    }
+    tmp.push_back(u);
+    for(int i=0;i<pre[u].size();i++)
+    {
+        DFS(pre[u][i]);
+    }
+    tmp.pop_back();
+    return;
+}
+int main()
+{
+    fill(G[0],G[0]+MAXN*MAXN,INF);
+    cin>>n>>e>>S>>D;
+    for(int i=0;i<e;i++)
+    {
+        cin>>a>>b>>w>>c;
+        G[a][b]=G[b][a]=w;
+        cost[a][b]=cost[b][a]=c;
+    }
+    dijkstra(S);
+    DFS(D);
+    vector<int> res;
+    for(int i=ans.size()-1;i>=0;i--)
+    {
+        cout<<ans[i]<<' ';
+    }
+    cout<<d[D]<<' '<<MINCOST;
+    
+    return 0;
+}
+*/

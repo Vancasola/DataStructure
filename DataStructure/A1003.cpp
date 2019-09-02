@@ -173,8 +173,8 @@ int main()
         G[u][v]=G[v][u]=wei;
     }
     dijkstra(src);
-    //for(int i=0;i<n;i++)
-    //    cout<<d[i]<<endl;
+    for(int i=0;i<n;i++)
+        cout<<d[i]<<endl;
     DFS(dst);
     cout<<num[dst]<<' '<<w[dst]<<endl;
     return 0;
@@ -276,3 +276,13 @@ int main()
     return 0;
 }
 */
+/*
+ 5 6 0 2
+ 1 2 1 5 3
+ 0 1 1
+ 0 2 2
+ 0 3 1
+ 1 2 1
+ 2 4 1
+ 3 4 1*/
+

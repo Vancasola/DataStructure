@@ -43,3 +43,39 @@ int main()
     return 0;
 }
 */
+//10:40 10:50 11:02 11:05
+/*
+#include<iostream>
+#include <string>
+#include<stdio.h>
+using namespace std;
+int main()
+{
+    int h1,h2;
+    int next[100010];
+    char data[100010];
+    bool vis[100010]={false};
+    int n=0,addr=0,c=0,ne=0;
+    int suffix=-1;
+    cin>>h1>>h2>>n;
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d %c %d",&addr,&c,&ne);
+        data[addr] = c;
+        next[addr] = ne;
+        //cout<<data[addr] <<' '<<next[addr]<<endl;
+    }
+    //cout<<"!"<<endl;
+    for(int i=h1;i!=-1;i=next[i])vis[i] = true;
+    for(int j=h2;j!=-1;j=next[j])
+    {
+        if(vis[j]==true)
+        {
+            printf("%05d",j);
+            return 0;
+            }
+    }
+    cout<<suffix;
+    return 0;
+}
+*/
