@@ -247,3 +247,238 @@ int main()
     return 0;
 }
 */
+//10:30 10:58 11:06
+/*
+#include <iostream>
+#include <queue>
+#include <stack>
+#include <algorithm>
+#include <stdio.h>
+using namespace std;
+int n,a[1010];
+struct node
+{
+    int data;
+    node *lc,*rc;
+};
+void insert(node*& root,int x)
+{
+    if(root==NULL)
+    {
+        root = new node;
+        root->data = x;
+        root->lc = root->rc= NULL;
+        return;
+    }
+    if(x<root->data)insert(root->lc,x);
+    else if(x>=root->data)insert(root->rc,x);
+    return;
+}
+node* create(int a[],int n)
+{
+    node* root=NULL;
+    for(int i=0;i<n;i++)
+    {
+        insert(root,a[i]);
+    }
+    return root;
+}
+
+void mirrorinsert(node*& root,int x)
+{
+    if(root==NULL)
+    {
+        root = new node;
+        root->data = x;
+        root->lc = root->rc= NULL;
+        return;
+    }
+    if(x>=root->data)mirrorinsert(root->lc,x);
+    else if(x<root->data)mirrorinsert(root->rc,x);
+    return;
+}
+node* mirrorcreate(int a[],int n)
+{
+    node* root=NULL;
+    for(int i=0;i<n;i++)
+    {
+        mirrorinsert(root,a[i]);
+    }
+    return root;
+}
+void tpreorder(node* root)
+{
+    if(root == NULL)return;
+    cout<< root->data;
+    if(root->lc!=NULL)tpreorder(root->lc);
+    if(root->rc!=NULL)tpreorder(root->rc);
+}
+void preorder(node* root,queue<int> &q)
+{
+    if(root == NULL)return;
+    q.push(root->data);
+    if(root->lc!=NULL)preorder(root->lc,q);
+    if(root->rc!=NULL)preorder(root->rc,q);
+}
+void postorder(node* root,queue<int> &q)
+{
+    if(root == NULL)return;
+    if(root->lc!=NULL)postorder(root->lc,q);
+    if(root->rc!=NULL)postorder(root->rc,q);
+    q.push(root->data);
+}
+bool judge(int a[],queue<int> &q)
+{
+    int i=0;
+    while(!q.empty())
+    {
+        if(q.front() != a[i++])return false;
+        q.pop();
+    }
+    return true;
+}
+int main()
+{
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    node* root, *mirrorroot;
+    root=create(a,n);
+    mirrorroot = mirrorcreate(a, n);
+    queue<int> q,mq;
+   
+    preorder(root, q);
+    preorder(mirrorroot, mq);
+    bool f1=judge(a,mq),f2 = judge(a,q);
+    if(f1||f2)
+    {
+        cout<<"YES"<<endl;
+        queue<int> p;
+        if(f2)postorder(root, p);
+        else if(f1)postorder(mirrorroot, p);
+        while(p.size()>1)
+        {
+            cout<<p.front()<<' ';
+            p.pop();
+        }
+        cout<<p.front();
+        p.pop();
+    }
+    else cout<<"NO";
+    return 0;
+}
+//binary create insert mirror preorder postorder yes
+//7
+//8 6 5 7 10 8 11
+*/
+//11:11 11:27 11:30;
+/*
+#include<iostream>
+#include <queue>
+using namespace std;
+int n,a[1010];
+struct node
+{
+    int data;
+    node* lc,*rc;
+};
+void insert(node* &root,int x)
+{
+    if(root==NULL)
+    {
+        root = new node;
+        root->data = x;
+        root->lc=root->rc=NULL;
+        return;
+    }
+    if(x<root->data)insert(root->lc,x);
+    else if(x>=root->data)insert(root->rc,x);
+    return;
+}
+void minsert(node* &root,int x)
+{
+    if(root==NULL)
+    {
+        root = new node;
+        root->data = x;
+        root->lc=root->rc=NULL;
+        return;
+    }
+    if(x>=root->data)minsert(root->lc,x);
+    else if(x<root->data)minsert(root->rc,x);
+    return;
+}
+node* create(int a[],int n)
+{
+    node* root=NULL;
+    for(int i=0;i<n;i++)
+    {
+        insert(root,a[i]);
+    }
+    return root;
+}
+node* mcreate(int a[],int n)
+{
+    node* root=NULL;
+    for(int i=0;i<n;i++)
+    {
+        minsert(root,a[i]);
+    }
+    return root;
+}
+void preorder(node* root,queue<int> &q)
+{
+    if(root==NULL)return;
+    q.push(root->data);
+    if(root->lc!=NULL)preorder(root->lc, q);
+    if(root->rc!=NULL)preorder(root->rc, q);
+}
+void postorder(node* root,queue<int> &q)
+{
+    if(root==NULL)return;
+    if(root->lc!=NULL)postorder(root->lc, q);
+    if(root->rc!=NULL)postorder(root->rc, q);
+    q.push(root->data);
+}
+bool judge(int a[], queue<int> &q)
+{
+    int i=0;
+    while(!q.empty())
+    {
+        if(a[i++] != q.front())return false;
+        q.pop();
+    }
+    return true;
+}
+int main()
+{
+    cin>>n;
+    for(int i=0;i<n;i++)
+    {
+        cin>>a[i];
+    }
+    node* root = create(a,n);
+    node* mroot = mcreate(a,n);
+    queue<int> q,mq;
+    preorder(root,q);
+    preorder(mroot,mq);
+    bool f1 = judge(a,q),f2 = judge(a,mq);
+    if(f1||f2)
+    {
+        cout<<"YES"<<endl;
+        queue<int> p;
+        if(f1)postorder(root, p);
+        else if(f2)postorder(mroot, p);
+        while(p.size()>1){
+            cout<<p.front()<<' ';
+            p.pop();
+        }
+        cout<<p.front();
+    }
+    else cout<<"NO";
+    
+    return 0;
+}
+*/
