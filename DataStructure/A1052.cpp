@@ -68,3 +68,125 @@ int main(void)
     return 0;
 }
 */
+//3:38 //4:05
+/*
+#include<iostream>
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+const int MAXN = 100010;
+struct node
+{
+    int x;
+    int addr;
+    int next;
+    bool f;
+};
+bool cmp(node &a,node& b)
+{
+    if(a.f&&b.f)return a.x<b.x;
+    return a.f>b.f;
+}
+int main()
+{
+    int n,h,ht;
+    node a[MAXN];
+    int addr,key,next;
+    cin>>n>>h;
+    if(h==-1)
+    {
+        printf("0 -1");
+        return 0;
+    }
+    for(int i=0;i<MAXN;i++)a[i].f=false;
+    for(int i=0;i<n;i++)
+    {
+        cin>>addr>>key>>next;
+        a[addr].x = key;
+        a[addr].addr = addr;
+        a[addr].next = next;
+        //cout<<a[addr].addr<<' '<<a[addr].x<<' '<<a[addr].next<<' '<<a[addr].f<<endl;
+    }
+    int i;
+    for( i=0,ht = h;ht!=-1;i++,ht = a[ht].next)
+    {
+        a[ht].f = true;
+        if(i>=n)break;
+    }
+    int N=i;
+    sort(a,a+MAXN,cmp);
+    for(i=0;i<N;i++)
+    {
+        a[i].next=a[i+1].addr;
+    }
+    printf("%d %05d\n",N,a[0].addr);
+    for(i=0;i<N-1;i++)
+    {
+        printf("%05d %d %05d\n",a[i].addr,a[i].x,a[i].next);
+    }
+    printf("%05d %d -1",a[i].addr,a[i].x);
+    return 0;
+}*/
+//5:20 5:31 5:42
+/*
+#include<iostream>
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+const int MAXN = 100010;
+struct node
+{
+    int x;
+    int addr;
+    int next;
+    bool f;
+    
+};
+bool cmp(node& a,node& b)
+{
+    if(a.f&&b.f)return a.x<b.x;
+    return a.f>b.f;
+}
+int main()
+{
+    int n,h,ht,addr,x,next;
+    node a[MAXN] ;
+    cin>>n>>h;
+    if(h==-1)
+    {
+        printf("0 -1");
+        return 0;
+    }
+    for(int i=0;i<MAXN;i++)
+    {
+        a[i].f = false;
+    }
+    for(int i=0;i<n;i++)
+    {
+        cin>>addr>>x>>next;
+        a[addr].addr = addr;
+        a[addr].x = x;
+        a[addr].next = next;
+    }
+    int i=0,N;
+    for(i=0,ht=h;ht!=-1;i++,ht=a[ht].next)
+    {
+        a[ht].f = true;
+        if(i>=n)break;
+        //printf("%05d %d %05d\n",a[ht].addr,a[ht].x,a[ht].next);
+    }
+    N=i;
+    sort(a,a+MAXN,cmp);
+    for(i=0;i<N;i++)
+    {
+        a[i].next=a[i+1].addr;
+    }
+    printf("%d %05d\n",N,a[0].addr);
+    for(i=0;i<N-1;i++)
+    {
+        printf("%05d %d %05d\n",a[i].addr,a[i].x,a[i].next);
+    }
+    printf("%05d %d -1",a[i].addr,a[i].x);
+    return 0;
+}
+*/

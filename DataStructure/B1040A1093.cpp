@@ -74,3 +74,39 @@ int main()
     return 0;
 }
 */
+/*
+#include<iostream>
+#include<stdio.h>
+#include<string.h>
+using namespace std;
+int main()
+{
+    int P[100010]={0},T[100010]={0},len=0;
+    int ans=0;
+    char pat[100010];
+    cin>>pat;
+    len = strlen(pat);
+
+    for(int i=1;i<len;i++)
+    {
+        if(pat[i-1]=='P')P[i]+=P[i-1]+1 ;
+        else P[i] = P[i-1];
+    }
+    for(int i=len-2;i>=0;i--)
+    {
+        if(pat[i+1]=='T')T[i]+=T[i+1]+1 ;
+        else T[i] = T[i+1];
+    }
+    for(int i=0;i<len;i++)
+    {
+        if(pat[i]=='A')
+        {
+            ans += P[i]*T[i];
+            ans%=1000000007;
+        }
+    }
+    cout<<ans;
+    return 0;
+}
+//PPPAATTT
+*/

@@ -105,3 +105,81 @@ int main(void)
     return 0;
 }
 */
+//8:58
+//9:17 9:37
+/*
+#include<iostream>
+#include<stdio.h>
+#include<algorithm>
+#include<vector>
+#include<cmath>
+#include<map>
+using namespace std;
+const int MAXN = 2010;
+vector<int> tbl;
+map<int,int> ans;
+bool isPrime(int a)
+{
+    int sq = sqrt(a);
+    for(int i=2;i<=sq;i++)
+    {
+        if(a%i==0)return false;
+    }
+    return true;
+}
+void findPrime()
+{
+    for(int i=2;i<MAXN;i++)
+    {
+        if(isPrime(i))tbl.push_back(i);
+    }
+}
+int main()
+{
+    findPrime();
+    int n;
+    cin>>n;
+    if(n==0){printf("0=0");return 0;}
+    if(n==1){printf("1=1");return 0;}
+    int r = n;
+    while(n!=1)
+    {
+    for(int i=0;i<tbl.size();i++)
+    {
+        int x = tbl[i];
+        if(n%x==0)
+        {
+            if(ans.find(x)==ans.end())
+            {
+                ans[x] = 1;
+            }
+            else
+            {
+                ans[x]++;
+            }
+            n/=x;
+            break;
+        }
+    }
+    }
+    bool first = true;
+    cout<<r<<'=';
+    for(map<int,int>::iterator it = ans.begin();it!=ans.end();it++)
+    {
+        if(!first)
+        {
+            cout<<'*';
+        }
+        first = false;
+        if(it->second!=1)
+        {
+            cout<<it->first<<'^'<<it->second;
+        }
+        else{
+            cout<<it->first;
+        }
+    }
+    
+    return 0;
+}
+*/

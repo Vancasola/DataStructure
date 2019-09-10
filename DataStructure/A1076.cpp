@@ -92,3 +92,70 @@ int main()
     return 0;
 }
 */
+//10:10
+/*
+#include<iostream>
+#include<cstdio>
+#include<algorithm>
+#include<vector>
+#include<queue>
+using namespace std;
+int N=0,L=0;
+const int MAXN = 1010;
+vector<int> a[MAXN];
+int ly[MAXN];
+bool vis[MAXN]={false};
+int BFS(int u)
+{
+    queue<int> q;
+    q.push(u);
+    int num = 0;
+    int layer=1;
+    fill(ly,ly+N,1);
+    fill(vis,vis+N,false);
+    while(!q.empty())
+    {
+        q.front();
+        cout<<q.front()<<' ';
+        vis[q.front()]=true;
+        if(ly[q.front()]>L)break;
+        q.pop();
+        num++;
+        for(int i=0;i<a[u].size();i++)
+        {
+            if(vis[i]==false)
+            {
+            q.push(a[u][i]);
+            ly[a[u][i]] = layer;
+            }
+        }
+        layer++;
+    }
+    return num;
+}
+int main()
+{
+    cin>>N>>L;
+    int m,t;
+    for(int i=0;i<N;i++)
+    {
+        cin>>m;
+        for(int j=0;j<m;j++)
+        {
+            cin>>t;
+            ly[t] = 1;
+            a[t].push_back(t);
+        }
+    }
+    int K,u;
+    cin>>K;
+    for(int i=0;i<K-1;i++)
+    {
+        cin>>u;
+        cout<<u<<' '<<BFS(u)<<' '<<endl;;
+    }
+    cin>>u;
+    cout<<u<<' '<<BFS(u)<<' ';
+    return 0;
+}
+*/

@@ -61,3 +61,67 @@ int main()
     return 0;
 }
 */
+//6：58 7:16 7:17
+/*
+#include<iostream>
+#include<stdio.h>
+#include<algorithm>
+using namespace std;
+bool cmp1(int a,int b)
+{
+    return a<b;
+}
+bool cmp2(int a,int b)
+{
+    return a>b;
+}
+void ItoS(int a[],int x)
+{
+    int r=1;
+    for(int i=3;i>=0;i--)
+    {
+        a[i] = x%10;
+        //cout<<a[i]<<endl;;
+        x/=10;
+    }
+    return;
+}
+int StoI(int a[])
+{
+    int r=1, ans =0;
+    for(int i=3;i>=0;i--)
+    {
+        ans += a[i]*r;
+        r*=10;
+    }
+    return ans;
+}
+int main()
+{
+    int a[4],b[4],c,d,n;
+    cin>>n;
+    ItoS(a,n);
+    while(1)
+    {
+        ItoS(a,n);
+        ItoS(b,n);
+        sort(a,a+4,cmp1);
+        sort(b,b+4,cmp2);
+        c = StoI(a);
+        d = StoI(b);
+        n=d-c;
+        if(n==0)
+        {
+            printf("%04d - %04d = %04d\n",d,c,n);
+            return 0;
+        }
+        if(n==6174)
+        {
+            printf("%04d - %04d = %04d\n",d,c,n);
+            return 0;
+        }
+        printf("%04d - %04d = %04d\n",d,c,n);
+    }
+    return 0;
+}
+*/

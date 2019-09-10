@@ -259,6 +259,7 @@ node* create(int preL,int preR,int inL,int inR)
     int numL = i-inL;
     root->lc = create(preL+1,preL+numL,inL,i-1);
     root->rc = create(preL+numL+1,preR,i+1,inR);
+ 
     return root;
 }
 int num =0 ;
@@ -303,3 +304,63 @@ int main()
 
 4 1 6 3 5 7 2
 */
+//10:58 11:24 11:38
+/*
+#include<iostream>
+#include<stdio.h>
+#include<queue>
+using namespace std;
+int n;
+const int MAXN = 50;
+int post[MAXN],in[MAXN];
+struct node
+{
+    int x;
+    node* lc,*rc;
+};
+node* create(int postL,int postR,int inL,int inR)
+{
+    if(postL>postR)
+    {
+        return NULL;
+    }
+    node *root = new node;
+    root ->x = post[postR];
+    int i;
+    for(i = inL;i<=inR;i++)
+    {
+        if(in[i]==post[postR])break;
+    }
+    int numL = i - inL;
+    root->lc = create(postL,postL+numL-1,inL,i-1);
+    root->rc = create(postL+numL,postR-1, i+1, inR);
+    return root;
+}
+int num = 0;
+void layerorder(node* root)
+{
+    queue<node*> q;
+    q.push(root);
+    while(!q.empty())
+    {
+        node* no = q.front();
+        if(num<n-1)cout<<no->x<<' ';
+        else cout<<no->x;
+            num++;
+        q.pop();
+        if(no->lc!=NULL)q.push(no->lc);
+        if(no->rc!=NULL)q.push(no->rc);
+    }
+    return;
+}
+int main()
+{
+    cin>>n;
+    for(int i=0;i<n;i++)cin>>post[i];
+    for(int i=0;i<n;i++)cin>>in[i];
+    node* root = create(0,n-1,0,n-1);
+    layerorder(root);
+    return 0;
+}
+ */
+

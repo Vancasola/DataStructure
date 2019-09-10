@@ -264,6 +264,7 @@ int main()
     {
         cin>>weight[i];
     }
+ 
     for(int i=0;i<E;i++)
     {
         cin>>a>>b>>w;
@@ -286,3 +287,102 @@ int main()
  2 4 1
  3 4 1*/
 
+
+//10:23 10:54
+/*
+#include<iostream>
+#include<stdio.h>
+#include<vector>
+#include<algorithm>
+using namespace std;
+const int MAXN = 510, INF = 0x3fffffff;
+int G[MAXN][MAXN] = {0};
+int vis[MAXN] = {false};
+int d[MAXN];
+int N,E,S,D;
+int weight[MAXN]={0};
+int num = 0;
+int MAX=0;
+vector<int> pre[MAXN];
+vector<int> tmp;
+void dijkstra(int src)
+{
+    fill(d,d+MAXN,INF);
+    fill(vis,vis+MAXN,false);
+    d[src] =0;
+    for(int i=0;i<N;i++)
+    {
+        int u=-1, MIN = INF;
+        for(int j=0;j<N;j++)
+        {
+            if(vis[j]==false&&d[j]<MIN)
+            {
+                u=j;
+                MIN = d[j];
+            }
+        }
+        
+        if(u==-1)return;
+        vis[u] = true;
+        for(int v=0;v<N;v++)
+        {
+            if(vis[v]==false&&G[u][v]!=INF)
+            {
+                if(d[u]+G[u][v]<d[v])
+                {
+                    d[v]=G[u][v]+d[u];
+                    pre[v].clear();
+                    pre[v].push_back(u);
+                }
+                else if(d[u]+G[u][v]==d[v])
+                {
+                    pre[v].push_back(u);
+                }
+            }
+        }
+    }
+    return ;
+}
+void DFS(int u)
+{
+    if(u==S)
+    {
+        tmp.push_back(u);
+        num++;
+        int men = 0;
+        for(int i=0;i<tmp.size();i++)
+        {
+            men+=weight[tmp[i]];
+        }
+        //cout<< "men"<<men<<endl;
+        if(men>MAX)MAX = men;
+        tmp.pop_back();
+    }
+    tmp.push_back(u);
+    for(int i=0;i<pre[u].size();i++)
+    {
+        DFS(pre[u][i]);
+    }
+    tmp.pop_back();
+    return;
+}
+int main()
+{
+    cin>>N>>E>>S>>D;
+    int a,b,w;
+    fill(G[0],G[0]+MAXN*MAXN,INF);
+    for(int i=0;i<N;i++)cin>>weight[i];
+    for(int i=0;i<E;i++)
+    {
+        cin>>a>>b>>w;
+        G[a][b] = G[b][a] = w;
+        //cout<< G[a][b] << G[b][a] ;
+    }
+    dijkstra(S);
+    DFS(D);
+
+    cout<<num<<' '<<MAX;
+    
+    return 0;
+}
+*/
