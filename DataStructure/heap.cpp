@@ -86,3 +86,24 @@ int main()
     return 0;
 }
 */
+/*
+#include<stdio.h>
+#include<vector>
+#include<iostream>
+using namespace std;
+int main()
+{
+    vector<vector<int>> v(3);
+    for(int i=0;i<3;i++)
+    for(int j=0;j<2;j++)v[i].push_back(j);
+    
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<2;j++)printf("%d ",v[i][j]);
+        cout<<endl;
+    }
+    printf("%d,%d",v.size(),v[0].size());
+    return 0;
+}
+
+*/
