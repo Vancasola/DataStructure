@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/12/28.
 //  Copyright © 2019 none. All rights reserved.
 // 9:00
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <cmath>
@@ -49,3 +49,4 @@ int main()
     }
     return 0;
 }
+*/
