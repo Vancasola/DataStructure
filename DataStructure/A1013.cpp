@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/12/26.
 //  Copyright © 2019 none. All rights reserved.
 // 9:43
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <vector>
@@ -26,12 +26,6 @@ int repair(int N, vector<vector<int>> v,int a)
     {
         v[i][a]=v[a][i]=-1;
     }
-    /*
-    for(int i=1;i<=N;i++)
-    {
-        for(int j=1;j<=N;j++)cout<<v[i][j];
-        cout<<endl;
-    }*/
     while(!s.empty())
     {
         queue<int> q;
@@ -77,3 +71,4 @@ int main()
     }
     return 0;
 }
+*/
