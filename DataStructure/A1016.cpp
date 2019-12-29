@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/12/28.
 //  Copyright © 2019 none. All rights reserved.
 //  10:02 10:15
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -121,14 +121,7 @@ int main()
      
     sort(name.begin(),name.end(),cmp5);
 
-    /*
-    for(int k=0;k<=j;k++)
-    {
-        for(int i=0;i<v[k].size();i++)
-        {
-            cout<<v[k][i].id<<' '<<v[k][i].mo<<' '<<v[k][i].d<<' '<<v[k][i].h<<' '<<v[k][i].m<<' '<<v[k][i].f<<endl;
-        }
-    }*/
+
     record r1,r2;
     //fee(v[1][0],v[1][1]);
     int i=0;
@@ -159,3 +152,4 @@ int main()
     }
     return 0;
 }
+*/
