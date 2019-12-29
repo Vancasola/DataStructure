@@ -31,6 +31,7 @@
 		DF6C5F0222F47AEF00EE656F /* A1052.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C5F0122F47AEF00EE656F /* A1052.cpp */; };
 		DF6D3A5423B8BF0D00A7E481 /* A1017.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6D3A5323B8BF0D00A7E481 /* A1017.cpp */; };
 		DF6D3A5623B8D90C00A7E481 /* A1019.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6D3A5523B8D90C00A7E481 /* A1019.cpp */; };
+		DF6D3A5823B8E57C00A7E481 /* A1022.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6D3A5723B8E57C00A7E481 /* A1022.cpp */; };
 		DF70B1D522ED941100C7B22D /* B1009.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF70B1D422ED941100C7B22D /* B1009.cpp */; };
 		DF70B1D722ED9ADE00C7B22D /* sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF70B1D622ED9ADE00C7B22D /* sort.cpp */; };
 		DF70B1D922EDA68400C7B22D /* stl.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF70B1D822EDA68400C7B22D /* stl.cpp */; };
@@ -110,6 +111,7 @@
 		DF6C5F0122F47AEF00EE656F /* A1052.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1052.cpp; sourceTree = "<group>"; };
 		DF6D3A5323B8BF0D00A7E481 /* A1017.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1017.cpp; sourceTree = "<group>"; };
 		DF6D3A5523B8D90C00A7E481 /* A1019.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1019.cpp; sourceTree = "<group>"; };
+		DF6D3A5723B8E57C00A7E481 /* A1022.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1022.cpp; sourceTree = "<group>"; };
 		DF70B1D422ED941100C7B22D /* B1009.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1009.cpp; sourceTree = "<group>"; };
 		DF70B1D622ED9ADE00C7B22D /* sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sort.cpp; sourceTree = "<group>"; };
 		DF70B1D822EDA68400C7B22D /* stl.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stl.cpp; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				DF45D40423B797CB004D3FAC /* A1016.cpp */,
 				DF6D3A5323B8BF0D00A7E481 /* A1017.cpp */,
 				DF6D3A5523B8D90C00A7E481 /* A1019.cpp */,
+				DF6D3A5723B8E57C00A7E481 /* A1022.cpp */,
 			);
 			path = DataStructure;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				DF75610423B39CEA00E15222 /* A1008.cpp in Sources */,
 				DFFF017C230C3D0D000614C1 /* kruscal.cpp in Sources */,
 				DF6C1D5322CF467700B3760D /* B1036.cpp in Sources */,
+				DF6D3A5823B8E57C00A7E481 /* A1022.cpp in Sources */,
 				DFDF936022FBFDC700617FB5 /* heap.cpp in Sources */,
 				DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */,
 				DF43902822EE7F6900AF8F9B /* A1025.cpp in Sources */,
