@@ -5,7 +5,7 @@
 //  Created by vancasola on 2019/12/30.
 //  Copyright © 2019 none. All rights reserved.
 //  10:47 11:13
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -49,3 +49,4 @@ int main()
     if(a1=="")cout<<"00";
     return 0;
 }
+*/
