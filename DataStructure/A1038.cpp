@@ -5,7 +5,7 @@
 //  Created by vancasola on 2020/1/1.
 //  Copyright © 2020 none. All rights reserved.
 //  7 :46 8:07 8:15 8:27
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <algorithm>
@@ -67,5 +67,5 @@ int main()
         printf("%s",v[i].c_str());
     return 0;
 }
-
+*/
 
