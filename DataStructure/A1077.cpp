@@ -5,7 +5,7 @@
 //  Created by vancasola on 2020/1/7.
 //  Copyright © 2020 none. All rights reserved.
 //  6:51 7:11
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <string>
@@ -40,3 +40,4 @@ int main()
     else cout<<"nai";
     return 0;
 }
+*/
