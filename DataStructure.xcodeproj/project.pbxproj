@@ -31,6 +31,7 @@
 		DF4B724522F6E3B900645E34 /* Tree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF4B724422F6E3B900645E34 /* Tree.cpp */; };
 		DF4D870822FB1D7100EBBED3 /* disjoint set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF4D870722FB1D7100EBBED3 /* disjoint set.cpp */; };
 		DF5E99AD22A2AD6D00954903 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF5E99AC22A2AD6D00954903 /* main.cpp */; };
+		DF60EBDD23C5FD8D0013D733 /* A1085.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF60EBDC23C5FD8D0013D733 /* A1085.cpp */; };
 		DF6C1D4D22CF363100B3760D /* B1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D4B22CF363100B3760D /* B1001.cpp */; };
 		DF6C1D4F22CF3A8200B3760D /* B1032.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D4E22CF3A8200B3760D /* B1032.cpp */; };
 		DF6C1D5122CF3F5A00B3760D /* c1934.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF6C1D5022CF3F5A00B3760D /* c1934.cpp */; };
@@ -147,6 +148,7 @@
 		DF4D870722FB1D7100EBBED3 /* disjoint set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "disjoint set.cpp"; sourceTree = "<group>"; };
 		DF5E99A922A2AD6D00954903 /* DataStructure */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataStructure; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF5E99AC22A2AD6D00954903 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		DF60EBDC23C5FD8D0013D733 /* A1085.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1085.cpp; sourceTree = "<group>"; };
 		DF6C1D4B22CF363100B3760D /* B1001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1001.cpp; sourceTree = "<group>"; };
 		DF6C1D4E22CF3A8200B3760D /* B1032.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = B1032.cpp; sourceTree = "<group>"; };
 		DF6C1D5022CF3F5A00B3760D /* c1934.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = c1934.cpp; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				DF8E6E7123C4BC9500F4939C /* A1082.cpp */,
 				DFCDF28423C5EC0700AFFDE1 /* A1083.cpp */,
 				DFCDF28623C5F08200AFFDE1 /* A1084.cpp */,
+				DF60EBDC23C5FD8D0013D733 /* A1085.cpp */,
 				DF7E224722F05D3D00D62E04 /* A1059B1013.cpp */,
 				DFA1DB1B23BF72A3009B5209 /* A1060.cpp */,
 				DFA1DB1923BF6B64009B5209 /* A1061.cpp */,
@@ -431,6 +434,7 @@
 				DF45D40123B76F57004D3FAC /* A1014.cpp in Sources */,
 				DF93579523C376690035D167 /* A1075.cpp in Sources */,
 				DF71504523BCDF6600F49D25 /* A1042.cpp in Sources */,
+				DF60EBDD23C5FD8D0013D733 /* A1085.cpp in Sources */,
 				DF71920123B4CB7700D5237E /* A1010.cpp in Sources */,
 				DF18FBE723B22EDE0040940A /* A1002.cpp in Sources */,
 				DF71920523B4DA3F00D5237E /* A1012.cpp in Sources */,
