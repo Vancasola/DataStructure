@@ -9,55 +9,51 @@
 #include <stdio.h>
 #include <iostream>
 #include <string.h>
-#include <math.h>
+#include <string>
+#include <cmath>
+#include <algorithm>
 using namespace std;
+long long convert(string a,long long r){
+    long long x=1;
+    long long sum=0;
+    for(int i=a.size()-1;i>=0;i--){
+        if(a[i]>='0' && a[i]<='9')
+            sum+=(a[i]-'0')*x;
+        else
+            sum+=(a[i]-'a'+10)*x;
+        x*=r;
+        if(sum<0)return -1;
+    }
+    return sum;
+}
+char findmax(string s){
+    char t=-1;
+    for(int i=0;i<s.size();i++)
+        if(s[i]>t)t=s[i];
+    return t;
+}
 int main()
 {
-    char x[11],y[11],z[11];
-    int n=1,r1=0,r2=0;
-    int a=0,b=0;
-    cin>>x>>y>>n>>r1;
-    if(n==2)
-    {   strcpy(z,x);
-        strcpy(x,y);
-        strcpy(y,z);
+    string a,b;
+    long long l,r,f,x,y,m;
+    cin>>a>>b>>f>>r;
+    if(f==2)swap(a, b);
+    x=convert(a, r);
+    l=1;
+    char t=findmax(b);
+    l = (isdigit(t) ? t - '0': t - 'a' + 10) + 1;
+    r=max(x,l);
+    while(l<=r){
+        m=(l+r)/2;
+        y=convert(b,m);
+        if(y<0 || y>x)r=m-1;
+        else if(x==y){
+            printf("%lld",m);
+            return 0;}
+        else l=m+1;
     }
-    int p=1;
-    for(int i=strlen(x)-1;i>=0;i--)
-    {
-        if(x[i]>='0'&&x[i]<='9')
-            a+=(x[i]-'0')*p;
-        else
-            a+=(x[i]-'a'+10)*p;
-        p*=r1;
-    }
-    //cout<<"x "<<x<<endl;
-    int t=0;
-    for(int i=0;i<strlen(y);i++)
-    {
-        if(y[i]>='0'&&y[i]<='9')t=y[i]-'0';
-        else t=y[i]-'a'+10;
-        if(t>r2)r2=t;
-    }
-    //cout<<"r2 "<<r2<<endl;
-    r2++;
-    while(b<=a)
-    {
-        p=1;
-        b=0;
-        for(int i=strlen(y)-1;i>=0;i--)
-        {
-            if(y[i]>='0'&&y[i]<='9')
-                b+=(y[i]-'0')*p;
-            else
-                b+=(y[i]-'a'+10)*p;
-            p*=r2;
-        }
-        if(b==a){cout<<r2;return 0;}
-        else if(b==0)break;
-        r2++;
-    }
-    cout<<"Impossible";
+    
+    cout<<"Impossible"<<endl;
     return 0;
 }
 */
