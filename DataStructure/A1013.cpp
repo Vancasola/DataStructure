@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2019/12/26.
 //  Copyright © 2019 none. All rights reserved.
-// 9:43
+// 9:43 new 7:36 8:04
 /*
 #include <stdio.h>
 #include <iostream>
@@ -12,63 +12,51 @@
 #include <set>
 #include <queue>
 using namespace std;
-int repair(int N, vector<vector<int>> v,int a)
-{
-    
-    set<int> s;
-    set<int>::iterator it;
-    int ans=0;
-    for(int i=1;i<=N;i++)s.insert(i);
-    it=s.find(a);
-    if(it!=s.end())
-        s.erase(it);
-    for(int i=1;i<=N;i++)
-    {
-        v[i][a]=v[a][i]=-1;
+vector<vector<int>> v(1010);
+vector<bool> vis(1010);
+int n,m,k;
+int a,b;
+int out;
+void dfs(int x){
+    vis[x]=true;
+    for(int i=0;i<v[x].size();i++){
+        int t=v[x][i];
+        if(t==out)continue;
+        if(!vis[t])dfs(t);
     }
-    while(!s.empty())
-    {
-        queue<int> q;
-        it=s.begin();
-        q.push(*it);
-        ans++;
-        while(!q.empty())
-        {
-            int t=q.front();
-            //cout<<t<<endl;
-            it=s.find(t);
-            if(it!=s.end())
-                s.erase(it);
-            for(int i=1;i<=N;i++)
-            {
-                if(v[t][i]==1)
-                {
-                    q.push(i);
-                    v[t][i]=-1;
-                    v[i][t]=-1;
-                }
-            }
-            q.pop();
+    return;
+}
+int check(){
+    fill(vis.begin(),vis.begin()+n+10,false);
+    vis[out]=true;
+    int sum=0;
+    for(int i=1;i<=n;i++){
+        if(!vis[i]){
+            dfs(i);
+            sum++;
         }
     }
-    return ans-1;
+    return sum-1;
 }
 int main()
 {
-    int N,M,K;
-    cin>>N>>M>>K;
-    vector<vector<int>> v(1001,vector<int>(1001,-1));
-    int a,b;
-    for(int i=0;i<M;i++)
-    {
-        cin>>a>>b;
-        v[a][b]=v[b][a]=1;
+    cin>>n>>m>>k;
+    for(int i=0;i<m;i++){
+        scanf("%d %d",&a,&b);
+        v[a].push_back(b);
+        v[b].push_back(a);
     }
-    for(int i=0;i<K;i++)
-    {
-        cin>>a;
-        cout<<repair(N,v,a)<<endl;;
+    for(int i=0;i<k;i++){
+        scanf("%d",&a);
+        out=a;
+        cout<<check()<<endl;
     }
     return 0;
 }
 */
+/*
+ 3 2 3
+ 1 2
+ 1 3
+ 1 2 3
+ */
