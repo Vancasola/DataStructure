@@ -4,147 +4,228 @@
 //
 //  Created by vancasola on 2019/12/30.
 //  Copyright © 2019 none. All rights reserved.
-//  9:05
+//  7:11 8:35 8:51
 /*
 #include <stdio.h>
 #include <iostream>
 #include <vector>
 #include <queue>
 #include <algorithm>
+#include <set>
 using namespace std;
-struct men
-{
-    int arrive,serve,finish,t,wait;
+struct men{
+    int a,s,t,wait;
     bool vip;
-};
-struct table
-{
-    int id;
-    int served;
-    int time;
-    bool occupy;
-    bool vip;
-};
-bool cmp(const men &a,const men &b)
-{
-    if(a.vip==b.vip)return a.arrive<b.arrive;
+}v[10010];
+bool cmp(const men& a,const men& b){
+    if(a.a!=b.a)return a.a<b.a;
     return a.vip>b.vip;
 }
-bool cmpvip(const table &a,const table &b)
-{
-    return a.vip>b.vip;
-}
-bool cmpid(const table &a,const table &b)
-{
-    return a.id<b.id;
-}
-bool cmpserve(const men &a,const men &b)
-{
-    return a.serve<b.serve;
+bool cmp1(const men& a,const men& b){
+    return a.s<b.s;
 }
 int main()
 {
-    int hh,mm,ss,time,vip,vip_num=0;
-    int N,K,M;
-    vector<men> m;
-    vector<table> t;
-    cin>>N;
-    for(int i=0;i<N;i++)
-    {
-        scanf("%d:%d:%d %d %d",&hh,&mm,&ss,&time,&vip);
-        struct men man;
-        man.arrive=hh*3600+mm*60+ss;
-        man.serve=21*3600;
-        man.t=time;
-        if(time>2*60)man.t=2*60;
-        if(man.arrive>21*3600)continue;
-        man.vip=vip;
-        man.wait=0;
-        if(vip)vip_num++;
-        m.push_back(man);
-        }
-    cin>>K>>M;
-    for(int i=0;i<K;i++)
-    {
-        table ta;
-        ta.id=i;
-        ta.served=0;
-        ta.vip=false;
-        ta.occupy=false;
-        ta.time=8*3600;
-        t.push_back(ta);
+    int n,k,m,vip,valid=0;
+    int hh,mm,ss,t;
+    int w[110];
+    int count[110]={0};
+    vector<int> vipt;
+    vector<bool> vis(110,false);
+    vector<int> ordt;
+    set<int> viptt;
+    queue<int> vipp,ordp;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        scanf("%d:%d:%d %d %d",&hh,&mm,&ss,&t,&vip);
+        v[i].t=60*t;
+        v[i].a=hh*3600+mm*60+ss;
+        v[i].vip=vip;
+        if(v[i].a>=21*3600)continue;
+        else valid++;
     }
-    for(int i=0;i<M;i++)
+    sort(v,v+n,cmp);
+    for(int i=0;i<valid;i++)
     {
-        cin>>vip;
-        t[vip-1].vip=true;
+        if(v[i].vip)vipp.push(i);
+        else ordp.push(i);
     }
-    
-    sort(m.begin(),m.end(),cmp);
-    sort(t.begin(),t.end(),cmpvip);
-    int ix=0;
-    for(int i=8*3600;i<21*3600;i++)
-    {
-        
-        for(int j=0;j<M;j++)
-        {
-            if(t[j].time<i)t[j].time=i;
-            for(int k=0;k<vip_num;k++){
-                if(m[k].arrive<=t[j].time&&m[k].serve>=21*3600)
-                {
-                cout<<'.'<<endl;
-                
-                m[k].serve=t[j].time;
-                m[k].finish=t[j].time+m[k].t;
-                t[j].time+=m[k].t;
-                t[j].served++;
-                m[k].wait=m[k].serve-m[k].arrive;
-                    break;
-                }
-            }
-        }
-        for(int j=M;j<K;j++)
-        {
-            if(t[j].time<i)t[j].time=i;
-            for(int k=vip_num;k<m.size();k++){
-                if(m[k].arrive<=t[j].time&&m[k].serve>=21*3600)
-                {
-                cout<<'.'<<endl;
-                
-                m[k].serve=t[j].time;
-                m[k].finish=t[j].time+m[k].t;
-                t[j].time+=m[k].t;
-                t[j].served++;
-                m[k].wait=m[k].serve-m[k].arrive;
-                    break;
-                }
-            }
-            for(int k=0;k<vip_num;k++){
-                if(m[k].arrive<=t[j].time&&m[k].serve>=21*3600)
-                {
-                cout<<'.'<<endl;
-                
-                m[k].serve=t[j].time;
-                m[k].finish=t[j].time+m[k].t;
-                t[j].time+=m[k].t;
-                t[j].served++;
-                m[k].wait=m[k].serve-m[k].arrive;
-                    break;
-                }
-            }
+//    for(int i=0;i<valid;i++){
+//        printf("%02d:%02d:%02d ",v[i].a/3600,v[i].a/60-60*(v[i].a/3600),v[i].a%60);
+//        printf("%02d:%02d:%02d %d %d\n",v[i].a/3600,v[i].a/60-60*(v[i].a/3600),v[i].a%60,v[i].t,v[i].vip);
+//    }
+    cin>>k>>m;
+    fill(w+1,w+k+1,8*3600);
+    for(int i=0;i<m;i++){
+        cin>>t;
+        vipt.push_back(t);
+        viptt.insert(t);
+    }
+    for(int i=1;i<=k;i++){
+        if(viptt.find(i)==viptt.end()){
+            ordt.push_back(i);
         }
     }
-    sort(m.begin(),m.end(),cmpserve);
-    sort(t.begin(),t.end(),cmpid);
-    int ddl=21*3600;
-
-    for(int i=0;i<m.size();i++)
-    {
-        int arrive=m[i].arrive,serve=m[i].serve,wait=m[i].wait;
-        if(m[i].serve<ddl)
-        printf("%02d:%02d:%02d %02d:%02d:%02d %d\n",arrive/3600,arrive/60-(arrive/3600)*60,arrive%60,serve/3600,serve/60-(serve/3600)*60,serve%60,wait);
+    int pv=0,pt=0,x=0,cnt=0;
+    for(int i=0;i<n;i++){
+        int id=-1;
+        int MIN=24*3600;
+        for(int j=1;j<=k;j++){
+            if(w[j]<MIN){
+                id=j;
+                MIN=w[j];
+            }
+        }
+        if(w[id]>=21*3600)break;
+        else cnt++;
+        count[id]++;
+        if(vipp.empty()){
+            x=vipp.front();
+            vipp.pop();
+        }
+        else if(ordp.empty()){
+            x=ordp.front();
+            ordp.pop();
+        }
+        else{
+            int xv=vipp.front(),xt=ordp.front();
+            x=(v[xt].a<v[xv].a)? xt:xv;
+            if( viptt.find(id)!=viptt.end() && w[id]>v[xt].a && w[id]>v[xv].a){
+                x=xv;
+                vipp.pop();
+                goto f1;
+            }
+            if(v[xt].a<v[xv].a)ordp.pop();
+            else vipp.pop();
+        }
+        f1:1;
+        //cout<<i<<' '<<id<<' '<<x<<endl;
+        if(w[id]<=v[x].a){
+            v[x].s=v[x].a;
+            w[id]=v[x].s+v[x].t;
+            v[x].wait=0;
+        }
+        else{
+            v[x].s=w[id];
+            w[id]=v[x].s+v[x].t;
+            v[x].wait=v[x].s-v[x].a;
+        }
     }
-    
+    sort(v,v+cnt,cmp1);
+    for(int i=0;i<cnt;i++){
+        printf("%02d:%02d:%02d ",v[i].a/3600,v[i].a/60-60*(v[i].a/3600),v[i].a%60);
+        printf("%02d:%02d:%02d ",v[i].s/3600,v[i].s/60-60*(v[i].s/3600),v[i].s%60);
+        //if(v[i].wait%60==0)t=v[i].wait/60;
+        //else t=v[i].wait/60+1;
+        double wait=(double)v[i].wait/60.0;
+        if(wait-(int)wait<=0.4)wait=(int)wait;
+        else wait=(int)wait+1;
+        printf("%.0f\n",wait);
+    }
+    int i=0;
+    for( i=1;i<k;i++){
+        printf("%d ",count[i]);
+    }
+    printf("%d",count[i]);
     return 0;
-}
-*/
+}*/
+
+//if(v[i].vip){
+//    bool f=false;
+//    for(int j=0;j<vipt.size();j++){
+//        id=vipt[j];
+//        if(w[id]<=v[i].a){
+//            f=true;
+//            count[id]++;
+//            v[i].s=v[i].a;
+//            w[id]=v[i].s+v[i].t;
+//            v[i].wait=0;
+//            break;
+//        }
+//    }
+//    if(!f)
+//    {
+//        for(int j=0;j<ordt.size();j++){
+//            id=ordt[j];
+//            if(w[id]<v[i].a){
+//                f=true;
+//                count[id]++;
+//                v[i].s=v[i].a;
+//                w[id]=v[i].s+v[i].t;
+//                v[i].wait=0;
+//                break;
+//            }
+//        }
+//        if(!f)
+//        {
+//            int MIN=24*3600;
+//            for(int j=1;j<=k;j++){
+//                if(w[j]<MIN){
+//                    MIN=w[j];
+//                    id=j;
+//                }
+//            }
+//            count[id]++;
+//            if(w[id]<=v[i].a){
+//                v[i].s=v[i].a;
+//                w[id]=v[i].s+v[i].t;
+//                v[i].wait=0;
+//            }
+//            else{
+//                v[i].s=w[id];
+//                w[id]=v[i].s+v[i].t;
+//                v[i].wait=v[i].s-v[i].a;
+//            }
+//        }
+//    }
+//}
+//else{
+//    bool f=false;
+//    for(int j=0;j<ordt.size();j++){
+//        id=ordt[j];
+//        if(w[id]<=v[i].a){
+//            f=true;
+//            count[id]++;
+//            v[i].s=v[i].a;
+//            w[id]=v[i].s+v[i].t;
+//            v[i].wait=0;
+//            break;
+//        }
+//    }
+//    if(!f)
+//    {
+//        for(int j=0;j<vipt.size();j++){
+//            id=vipt[j];
+//            if(w[id]<=v[i].a){
+//                count[id]++;
+//                f=true;
+//                v[i].s=v[i].a;
+//                w[id]=v[i].s+v[i].t;
+//                v[i].wait=0;
+//                break;
+//            }
+//        }
+//        if(!f)
+//        {
+//            int MIN=24*3600;
+//            for(int j=1;j<=k;j++){
+//                if(w[j]<MIN){
+//                    MIN=w[j];
+//                    id=j;
+//                }
+//            }
+//            count[id]++;
+//            if(w[id]<=v[i].a){
+//                v[i].s=v[i].a;
+//                w[id]=v[i].s+v[i].t;
+//                v[i].wait=0;
+//            }
+//            else{
+//                v[i].s=w[id];
+//                w[id]=v[i].s+v[i].t;
+//                v[i].wait=v[i].s-v[i].a;
+//            }
+//        }
+//    }
+//}
+//cout<<i<<' '<<id<<endl;
