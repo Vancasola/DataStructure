@@ -4,59 +4,71 @@
 //
 //  Created by vancasola on 2020/1/14.
 //  Copyright © 2020 none. All rights reserved.
-//  9:28
+//  9:02 9:15
 /*
 #include <stdio.h>
 #include <iostream>
 #include <string>
 #include <algorithm>
 using namespace std;
-struct node{
-    float price;
-    int dis;
-}m[505];
-bool cmp(const node& a,const node&b){
-    return a.dis<b.dis;
+double C,D,A;
+int N;
+struct station {
+    double price,dis;
+}s[30010];
+bool cmp(const station &a, const station & b){
+    if(a.dis!=b.dis) return a.dis<b.dis;
+    return a.price<b.price;
 }
 int main(){
-    int cmax,dis,d,n;
-    float p=0,sum=0;
-    cin>>cmax>>dis>>d>>n;
-    for(int i=0;i<n;i++){
-        scanf("%f %d",&m[i].price,&m[i].dis);
+    cin>>C>>D>>A>>N;
+    double d=C*A,c=0;
+    int i;
+    double sum=0.0;
+    for( i=0;i<N;i++){
+        scanf("%lf %lf",&s[i].price,&s[i].dis);
     }
-    m[n].price=0;
-    m[n].dis=dis;
-    sort(m,m+n+1,cmp);
-    for(int i=0;i<n;i++){
-        printf("%.2f %d\n",m[i].price,m[i].dis);
+    s[i].price=0.0;
+    s[i].dis=D;
+    s[i+1].dis=9999999;
+    sort(s, s+N, cmp);
+    for( i=0;i<=N;i++){
+        printf("%.2lf %.0lf\n",s[i].price,s[i].dis);
     }
-    bool f=false;
-    p=0;
-    for(int i=0;i<n;){
-        f=false;
-        for(int j=i+1;j<=n;j++){
-            if(m[j].price<m[i].price){
-                while((m[j].dis-m[i].dis)/d > cmax){
-                    j--;
-                    f=true;
-                }
-                printf("%d %d %.2f %d\n",m[i].dis,m[j].dis,m[i].price,(m[j].dis-m[i].dis)/d);
-                if(f){
-                    sum+=(cmax-p)*m[i].price;
-                    p=cmax;
-                }
-                else {
-                    
-                    sum+=p;
-                    p=0;
-                }
-                p-=((m[j].dis-m[i].dis)/d);
-                i=j;
+    int a=0,b=1;
+    for(;a<=N;a++){
+        cout<<a<<endl;
+        b=a+1;
+        for(;b<=N+1;b++){
+            if(s[b].dis-s[a].dis>=d)break;
+        }
+        if(b==N+2){
+            printf("The maximum travel distance = %0.2lf",s[a].dis);
+            return 0;
+        }
+        for( i=a+1;i<=b;i++){
+            if(s[i].price<s[a].price){
+                c=0;
+                sum+=(s[a].price)*(s[i].dis-s[a].dis)/A;
+                a=i;
+                break;
             }
         }
+        if(i==b+1){
+            double MIN=99999999;
+            int index=a;
+            for(i=a;i<=b;i++){
+                if(s[i].price<MIN){
+                    MIN=s[i].price;
+                    index=i;
+                }
+            }
+            sum+=s[a].price*(C-c);
+            c-=(s[i].dis-s[a].dis)/A;
+        }
     }
-    printf("%.2f",sum);
+    printf("%.2lf",sum);
     return 0;
 }
+
 */
