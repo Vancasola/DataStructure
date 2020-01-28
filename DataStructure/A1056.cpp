@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2020/1/28.
 //  Copyright © 2020 none. All rights reserved.
-//  2:58
+//
 /*
 #include <stdio.h>
 #include <iostream>
@@ -30,58 +30,52 @@ node findmax(vector<node> v){
 }
 int main(){
     int t;
-    vector<node> v(1010),a;
+    vector<node> v(10010),a;
     cin>>np>>ng;
-    int rank=np/3+np-(np/3)*3;
     for(int i=0;i<np;i++){
         scanf("%d",&v[i].w);
-        v[i].r=rank;
         v[i].id=i;
     }
     for(int i=0;i<np;i++){
         scanf("%d",&t);
         v[t].order=i;
     }
-    for(int i=0;i<np;i++){
+    for(int i=0;i<np;i++)
         a.push_back(v[i]);
-    }
     sort(a.begin(),a.begin()+np,cmp);
-    for(int i=0;i<np;i++){
-        printf("%d ",a[i].w);
-    }
-    cout<<endl;
-    int maxrank;
-    while(a.size()!=1){
+    while( a.size()!=1){
         vector<node> next,tmp;
-        int i=0;
+        int i=0,rank=0;
+        if(a.size()%ng==0)rank=a.size()/ng+1;
+        else rank=a.size()/ng+1+1;
         if(a.size()>ng){
-        for( i=0;i<(a.size()/ng)*3;i++){
-            tmp.push_back(a[i]);
-            if((i+1)%(ng)==0){
-                next.push_back( findmax(tmp));
-                tmp.clear();
+            for( i=0;i<(a.size()/ng)*ng;i++){
+                v[a[i].id].r=rank;
+                tmp.push_back(a[i]);
+                if((i+1)%ng==0){
+                    next.push_back( findmax(tmp));
+                    tmp.clear();
+                }
             }
         }
+        if(i<a.size()){
+            for(;i<a.size();i++){
+                v[a[i].id].r=rank;
+                tmp.push_back(a[i]);
+            }
+            next.push_back( findmax(tmp));
         }
-        cout<<i<<endl;
-        if(i<a.size())
-        for(;i<a.size();i++){
-            tmp.push_back(a[i]);
-        }
-        next.push_back( findmax(tmp));
-        cout<<endl<<next.size()<<endl;
-        for(int j=0;j<next.size();j++){
-            int id=next[j].id;
-            cout<<next[j].w<<' ';
-            v[id].r--;
-            maxrank=v[id].r;
-        }
-        
         a=next;
     }
+    if(a.size()){
+        a[0].r=1;
+        v[a[0].id].r=a[0].r;
+    }
     for(int i=0;i<np;i++){
-        printf("%d ",v[i].r);
+        if(i!=np-1)printf("%d ",v[i].r);
+        else printf("%d",v[np-1].r);
     }
     return 0;
 }
+
 */
