@@ -4,70 +4,111 @@
 //
 //  Created by vancasola on 2020/1/3.
 //  Copyright © 2020 none. All rights reserved.
-//  9:09
+//  11:57 12:21 1:17
 /*
 #include <stdio.h>
 #include <string>
 #include <iostream>
 using namespace std;
+int n=3;
+string convert(string s){
+    int p=-1;
+    string ans;
+    for(int i=0;i<s.size();i++){
+        if(s[i]=='0')continue;
+        else {
+            s=s.substr(i,s.size());
+            break;
+        }
+    }
+    if(s[0]=='0'){
+        int z=0;
+        ans+="0.";
+        for(int i=1;i<s.size();i++){
+            if(s[i]=='0')z++;
+            else break;
+        }
+        if(s.size()==1){
+            for(int i=0;i<n;i++)ans+='0';
+            ans+="*10^0";
+            return ans;
+        }
+    }
+    for(int i=0;i<s.size();i++)
+        if(s[i]=='.'){p=i;break;}
+    if(p==-1 ){
+        ans+="0.";
+        if(s.size()>=n){
+            for(int i=0;i<s.size() && i<n ;i++)
+                ans+=s[i];
+        }
+        else for(int i=0;i<n;i++){
+            if(i<s.size())ans+=s[i];
+            else ans+="0";
+        }
+        ans+="*10^";
+        ans+=to_string(s.size());
+        return ans;
+    }
+    else{
+        if(s[0]!='.'){
+            ans+="0.";
+            for(int i=0;i<n && s.size();i++){
+                if(s[i]!='.')ans+=s[i];
+                else n+=1;
+            }
+            n-=1;
+            if(ans.size()-1<n){
+                for(int i=0;i<n-ans.size()+1;i++)
+                    ans+="0";
+            }
+            ans+="*10^";
+            ans+=to_string(p);
+            return ans;
+        }
+        else{
+            int z=0,p1=0;
+            bool f=true;
+            ans+="0.";
+            for(int i=1;i<s.size();i++){
+                if(s[i]=='0')z++;
+                else{
+                    f=false;
+                    break;
+                }
+            }
+            if(f){
+                    for(int i=0;i<n;i++)ans+='0';
+                    ans+="*10^0";
+                    return ans;
+
+            }
+            for(int i=1+z;i<s.size() && p1<n;i++){
+                ans+=s[i];
+                p1++;
+            }
+            if(p1<n)for(int i=0;i<n-p1;i++){
+                ans+='0';
+            }
+            ans+="*10^";
+            if(z){
+                ans+='-';
+                ans+=to_string(z);
+            }
+            else ans+='0';
+        }
+    }
+    return ans;
+}
 int main()
 {
-    int n,p1=0,p2=0;
-    string a,b,s1="0.",s2="0.";
+    string a,b;
+    string s1,s2;
     cin>>n>>a>>b;
-    for(int i=0;i<a.size();i++)
-        if(a[i]=='.'){p1=i;break;}
-    for(int i=0;i<b.size();i++)
-        if(b[i]=='.'){p2=i;break;}
-    if(!p1)p1=a.size();
-    if(!p2)p2=b.size();
-    //if(p1<n)p1=(n<a.size())?n:a.size();
-    //if(p2<n)p2=(n<b.size())?n:b.size();
-    if(a[0]=='0'&&a[1]=='.')
-    {
-        int i=2,j=0;
-        for(;j<n-1 && i<a.size();i++)
-        {
-            s1+=a[i];
-            p1=-1*j;
-        }
-    }
-    else
-        for(int i=0,j=0;j<n && i<a.size();i++,j++){
-            if(a[i]=='.'){j--;continue;}
-            s1+=a[i];
-        }
-    if(b[0]=='0'&&b[1]=='.')
-    {
-        int i=2,j=0;
-        for(;j<n-1 && i<b.size();i++)
-        {
-            s2+=b[i];
-            p2=-1*j;
-        }
-    }
-    else
-        for(int i=0,j=0;j<n && i<b.size();i++,j++){
-            if(b[i]=='.'){j--;continue;}
-            s2+=b[i];
-        }
-    s1+="*10^";
-    s2+="*10^";
-    s1+=to_string(p1);
-    s2+=to_string(p2);
-    if(s1==s2){
-        cout<<"YES";
-        bool f=false;
-        for(int i=2,j=0;j<n && i<s1.size();i++,j++)
-        {
-            if(s1[i]=='*')break;
-            if(s1[i]!='0'){f=true;break;}
-        }
-        if(f)cout<<' '<<s1;
-            }
-    else{
-        cout<<"NO "<<s1<<' '<<s2;
-    }
+    s1=convert(a);
+    s2=convert(b);
+    if(s1==s2)cout<<"YES"<<' '<<s1;
+    else cout<<"NO"<<' '<<s1<<' '<<s2;
     return 0;
 }
 */
