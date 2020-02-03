@@ -51,6 +51,7 @@ int main(){
                 for(int k=0;k<m;k++){
                     if(c[k]==j)continue;
                     if(d[j].find(c[k])!=d[j].end())sum++;
+ 
                 }
             }
             if(sum==m){
