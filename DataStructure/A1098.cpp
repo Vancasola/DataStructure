@@ -24,22 +24,51 @@ bool Equal(int a1[],int a2[]){
     }
     return true;
 }
-void insertion(){
+bool insertion(){
     bool f=false;
     for(int i=1;i<n;i++){
-        if(Equal(a, b))f=true;
-        for(int j=i-1;j>=0;j--){
-            if(a[j+1]<a[j])swap(a[j], a[j+1]);
+        int x=a[i];
+        for(int j=i-1;j>=-1;j--){
+            if(x<a[j])a[j+1]=a[j];
             else{
+                a[j+1]=x;
                 break;
             }
         }
-        //display(a);
         if(f){
             cout<<"Insertion Sort"<<endl;
             display(a);
-            return;
+            return f;
         }
+        f=Equal(a, b);
+    }
+    return f;
+}
+void downAdjust(int low,int high){
+    int i=low,j=2*i+1;
+    while(j<=high){
+        if(j+1<=high && c[j+1]>c[j])j=j+1;
+        if(c[i]<c[j]){
+            swap(c[i],c[j]);
+            i=j;
+            j=2*i+1;
+        }
+        else break;
+    }
+}
+void create(){
+    for(int i=n/2;i>=0;i--){
+        downAdjust(i,n-1);
+    }
+}
+void heapsort(){
+    create();
+    bool f=false;
+    for(int i=n-1;i>=0;i--){
+        if(f){printf("Heap Sort\n");display(c);break;}
+        if(Equal(b, c))f=true;
+        swap(c[0],c[i]);
+        downAdjust(0, i-1);
     }
 }
 int main(){
@@ -50,7 +79,9 @@ int main(){
     }
     for(int i=0;i<n;i++)
         scanf("%d",&b[i]);
-    insertion();
+    if(insertion())return 0;
+    heapsort();
     return 0;
 }
+
 */
