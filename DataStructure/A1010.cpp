@@ -2,7 +2,7 @@
 //  A1010.cpp
 //  DataStructure
 //
-//  Created by vancaosla on 2019/12/26.
+//  Created by vancasola on 2019/12/26.
 //  Copyright © 2019 none. All rights reserved.
 //7:05 7:40 7:53
 /*
