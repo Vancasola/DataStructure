@@ -229,3 +229,141 @@ int main()
 //    }
 //}
 //cout<<i<<' '<<id<<endl;
+/*
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <algorithm>
+#include <set>
+using namespace std;
+struct men{
+    int arr,t,ser=-1;
+    bool vip;
+};
+struct table{
+    int t=8*3600,num=0;
+    bool vip=false;
+};
+bool cmp(const men&a,const men&b){
+    return a.arr<b.arr;
+}
+bool cmp2(const men&a,const men&b){
+    return a.ser<b.ser;
+}
+void allocate(table& v,men& x){
+    v.num++;
+    if(x.arr<=v.t){
+        x.ser=v.t;
+    }
+    else if(x.arr>v.t){
+        x.ser=x.arr;
+    }
+    v.t=x.ser+x.t;
+}
+vector<men> v;
+int findnextvip(int vipid){
+    vipid++;
+    while(vipid<v.size() && !v[vipid].vip)vipid++;
+    return vipid;
+}
+int main(){
+    int n,k,m,t,f,hh,mm,ss;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        scanf("%d:%d:%d %d %d",&hh,&mm,&ss,&t,&f);
+        men man;
+        man.arr=3600*hh+60*mm+ss;
+        man.t=t*60;
+        if(man.t>60*120)man.t=120*60;
+        if(man.arr>=21*3600)continue;
+        if(f)man.vip=true;
+        else man.vip=false;
+        v.push_back(man);
+    }
+    sort(v.begin(),v.end(),cmp);
+//    for(int i=0;i<v.size();i++){
+//        t=v[i].arr;
+//        printf("%02d:%02d:%02d %d %d\n",t/3600%3600,t/60%60,t%60,v[i].t,v[i].vip);
+//    }
+    cin>>m>>k;
+    vector<table> vt(m+1);
+    for(int i=0;i<k;i++){
+        scanf("%d",&t);
+        vt[t].vip=true;
+    }
+    int vipid=-1;
+    vipid=findnextvip(vipid);
+    for(int i=0;i<v.size();){
+        int MIN=99999999,tblid=-1;
+        for(int j=1;j<=m;j++){
+            if(vt[j].t<MIN){
+                MIN=vt[j].t;
+                tblid=j;
+            }
+        }
+        if(vt[tblid].t>=21*3600)break;
+        if(v[i].vip && i<vipid){
+            i++;
+            continue;
+        }
+        if(vt[tblid].vip){
+            if(v[i].vip){
+                allocate(vt[tblid], v[i]);
+                if(i==vipid)vipid=findnextvip(vipid);
+                i++;
+            }
+            else{
+                if(vipid<v.size() && v[vipid].arr<=vt[tblid].t){
+                    allocate(vt[tblid], v[vipid]);
+                    vipid=findnextvip(vipid);
+                }
+                else{
+                    allocate(vt[tblid], v[i]);
+                    i++;
+                }
+            }
+        }
+        else{
+            if(!v[i].vip){
+                allocate(vt[tblid], v[i]);
+                i++;
+            }
+            else{
+                int viptblid=-1,MIN=99999999;
+                for(int j=1;j<=m;j++){
+                    if(vt[j].t<MIN && vt[j].vip){
+                        MIN=vt[j].t;
+                        viptblid=j;
+                    }
+                }
+                if(viptblid!=-1 && vt[viptblid].t<=v[i].arr){
+                    allocate(vt[viptblid], v[i]);
+                    if(i==vipid)vipid=findnextvip(vipid);
+                    i++;
+                }
+                else{
+                    allocate(vt[tblid], v[i]);
+                    if(i==vipid)vipid=findnextvip(vipid);
+                    i++;
+                }
+            }
+        }
+    }
+    sort(v.begin(),v.end(),cmp2);
+    for(int i=0;i<v.size();i++){
+        if(v[i].ser==-1)continue;
+        t=v[i].arr;
+        printf("%02d:%02d:%02d ",t/3600,t%3600/60,t%60);
+        t=v[i].ser;
+        printf("%02d:%02d:%02d %d\n",t/3600,t%3600/60,t%60,(v[i].ser-v[i].arr+30)/60);
+    }
+    for(int i=1;i<=m;i++){
+        if(i<m)printf("%d ",vt[i].num);
+        else printf("%d",vt[i].num);
+    }
+    return 0;
+}
+
+
+*/
