@@ -24,33 +24,31 @@ struct node{
 };
 bool f=true;
 node* create(int prel,int prer,int postl,int postr){
-    if(prel>prer){
-        return NULL;
-    }
-    if(pre[prel]==post[postr]&&pre[prel+1]==post[postr-1])f=false;
-    node* r=new node();
-    int left,right;
-    for(int i=postl;i<=postr;i++){
-        if(post[i]==pre[prel]){
-            left=i;
+    node* r=new node(post[postr]);
+    if(prel==prer)return r;
+    int k;
+    for(int i=prel+1;i<=prer;i++)
+    {
+        if(post[postr-1]==pre[i]){
+            k=i;
             break;
         }
     }
-    for(int i=prel;i<=prer;i++){
-        if(pre[i]==post[postr]){
-            right=i;
-            break;
-        }
+    if(k-prel>1){
+        r->lc=create(prel+1, k-1, postl, postl+k-prel-2);
+        r->rc=create(k, prer, postl+k-prel-1, postr-1);
     }
-    r->lc=create(prel+1, right, postl, left-1);
-    r->rc=create(right+1, prer, left, postr-1);
+    else{
+        f=false;
+        r->rc=create(prel+1, prer, postl, postr-1);
+    }
     return r;
 }
 vector<int> v;
 void inorder(node* r){
     if(r->lc!=NULL)inorder(r->lc);
-    if(r->rc!=NULL)inorder(r->rc);
     v.push_back(r->x);
+    if(r->rc!=NULL)inorder(r->rc);
 }
 int main(){
     cin>>n;
@@ -64,11 +62,11 @@ int main(){
     root=create(0, n-1, 0, n-1);
     if(f)printf("Yes\n");
     else printf("No\n");
+    inorder(root);
     for(int i=0;i<v.size();i++){
         if(i<v.size()-1)printf("%d ",v[i]);
         else printf("%d\n",v[i]);
     }
     return 0;
 }
-
 */
