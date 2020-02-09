@@ -11,49 +11,85 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-bool isprime(int x){
-    int k=sqrt(x);
-    if(x<=2)return false;
-    if(x==2)return true;
-    for(int i=2;i<=k;i++){
-        if(x%i==0)return false;
+struct node{
+    int x;
+    node*lc,*rc;
+    int h;
+    node(){}
+    node(int d){
+        x=d;
+        lc=rc=NULL;
+        h=1;
     }
-    return true;
+};
+int getheight(node* r){
+    if(r==NULL)return 0;
+    return r->h;
 }
-int main(){
-    int size,n,m,i,t,p;
-    int a[10010];
-    fill(a,a+10010,-1);
-    cin>>size>>n>>m;
-    for( i=size;;i++){
-        if(isprime(i))break;
+int getfactor(node* r){
+    return getheight(r->lc)-getheight(r->rc);
+}
+void updateheight(node* r){
+    r->h=max(getheight(r->lc),getheight(r->rc))+1;
+}
+void L(node*& r){
+    node* t=r->rc;
+    r->rc=t->lc;
+    t->lc=r;
+    updateheight(r);
+    updateheight(t);
+    r=t;
+}
+void R(node*& r){
+    node* t=r->lc;
+    r->lc=t->rc;
+    t->rc=r;
+    updateheight(r);
+    updateheight(t);
+    r=t;
+}
+void insert(node*& r,int x){
+    if(r==NULL){
+        r=new node(x);
+        return ;
     }
-    size=i;
-    for(int i=0;i<n;i++){
-        scanf("%d",&t);
-        for(int j=0;;j++){
-            p=(t+j*j)%size;
-            if(j>size){
-                printf("%d cannot be inserted.\n",t);
-                break;
+    if(x<r->x){
+        insert(r->lc, x);
+        updateheight(r);
+        if(getfactor(r)==2){
+            if(getfactor(r->lc)==1){
+                R(r);
             }
-            else if(a[p]==-1){
-                a[p]=t;
-                break;
+            else if(getfactor(r->lc)==-1){
+                L(r->lc);
+                R(r);
             }
         }
     }
-    double sum=0.0;
-    for(int i=0;i<m;i++){
-        scanf("%d",&t);
-        for(int j=0;j<=size;j++){
-            p=(t+j*j)%size;
-            sum++;
-            if(a[p]==-1 || a[p]==t)break;
+    if(x>r->x){
+        insert(r->rc, x);
+        updateheight(r);
+        if(getfactor(r)==-2){
+            if(getfactor(r->rc)==-1){
+                L(r);
+            }
+            else if(getfactor(r->rc)==1){
+                R(r->rc);
+                L(r);
+            }
         }
     }
-    printf("%.1f",sum/m);
-    return 0;
 }
 
+int main(){
+    node* root=NULL;
+    int n,t;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        scanf("%d",&t);
+        insert(root, t);
+    }
+    cout<<root->x;
+    return 0;
+}
 */
