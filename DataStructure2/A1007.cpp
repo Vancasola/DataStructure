@@ -4,7 +4,7 @@
 //
 //  Created by vancaosla on 2020/2/11.
 //  Copyright © 2020 none. All rights reserved.
-//  1:00 1:09
+//  1:00 1:09 1:26 1:34
 /*
 #include <stdio.h>
 #include <iostream>
@@ -12,8 +12,9 @@
 #include <algorithm>
 using namespace std;
 int main(){
-    int n,a[10010],l=0,r=0,ml,mr,sum=0,Max=0;
+    int n,a[10010],l=0,r=0,ml=0,mr=0,sum=0,Max=-1;
     cin>>n;
+    if(n==0)return 0;
     bool f=false;
     for(int i=0;i<n;i++)scanf("%d",&a[i]);
     for(int i=0;i<n;i++){
