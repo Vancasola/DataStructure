@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2020/2/11.
 //  Copyright © 2020 none. All rights reserved.
-//  11:13 11:28
+//  11:13 11:28 11:41 12:14
 /*
 #include <stdio.h>
 #include <iostream>
@@ -12,38 +12,34 @@
 #include <algorithm>
 #include <unordered_map>
 using namespace std;
-bool cmp(const pair<int,double> &a,const pair<int,double> &b){
+bool cmp(const pair<double,double> &a,const pair<double,double> &b){
     return a.first>b.first;
 }
 int main(){
-    unordered_map<int,double> p;
-    int n,m;
-    int e;
+    unordered_map<double,double> p;
+    int n;
+    double e;
     double c;
     cin>>n;
     for(int i=0;i<n;i++){
-        scanf("%d %lf",&e,&c);
-        if(p.find(e)==p.end())p[e]=c;
-        else p[e]+=c;
+        scanf("%lf %lf",&e,&c);
+        p[e]+=c;
     }
     cin>>n;
     for(int i=0;i<n;i++){
-        scanf("%d %lf",&e,&c);
-        if(p.find(e)==p.end())p[e]=c;
-        else p[e]+=c;
+        scanf("%lf %lf",&e,&c);
+        p[e]+=c;
     }
-//    for(unordered_map<int, double>::iterator it=p2.begin();it!=p2.end();it++){
-//        p1[it->first]+=it->second;
-//    }
-    vector<pair<int,double>> v;
-    for(unordered_map<int, double>::iterator it=p.begin();it!=p.end();it++){
-        v.push_back(pair<int,double>( it->first,it->second));
+    vector<pair<double,double>> v;
+    for(unordered_map<double, double>::iterator it=p.begin();it!=p.end();it++){
+        if(it->second)
+        v.push_back(pair<double,double>( it->first,it->second));
     }
     sort(v.begin(),v.end(),cmp);
     printf("%d",v.size());
     for(int i=0;i<v.size();i++)
-    printf(" %d %.1lf",v[i].first,v[i].second);
+    printf(" %.lf %.1lf",v[i].first,v[i].second);
+    printf("\n");
     return 0;
 }
-
 */
