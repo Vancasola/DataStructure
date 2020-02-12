@@ -4,8 +4,8 @@
 //
 //  Created by vancasola on 2020/2/11.
 //  Copyright © 2020 none. All rights reserved.
-//  3:33
-
+//  3:33 5:13
+/*
 #include <stdio.h>
 #include <iostream>
 #include <vector>
@@ -14,9 +14,8 @@
 #include <string>
 using namespace std;
 long long convert(char c){
-    if(c>='a' && c<='z'){
+    if(c>='a' && c<='z')
         return 10+c-'a';
-    }
     else return c-'0';
 }
 long long count(string sa,long long radix){
@@ -42,18 +41,17 @@ int main(){
     while(left<=right){
         m=(left+right)/2;
         sum=count(sb,m);
-        if(sum>a||sum<0){
+        if(sum>a||sum<0)
             right=m-1;
-        }
         else if(sum==a){
             f=true;
             break;
         }
-        else{
+        else
             left=m+1;
-        }
     }
     if(f)cout<<m;
     else cout<<"Impossible";
     return 0;
 }
+*/
