@@ -4,8 +4,8 @@
 //
 //  Created by vancasola on 2020/2/12.
 //  Copyright © 2020 none. All rights reserved.
-//  9:52 10:11
-/*
+//  9:52 10:11 10:49 11:03
+
 #include <stdio.h>
 #include <iostream>
 #include <algorithm>
@@ -37,40 +37,48 @@ int main(){
         scanf("%d %d %d",&s[i].c,&s[i].m,&s[i].e);
         s[i].a=(s[i].c+s[i].m+s[i].e)/3;
     }
+    int p=0;
     sort(s,s+n,cmp4);
     for(int i=0;i<n;i++){
-        if(i+1<s[i].r){
-            s[i].r=i+1;
+        if(i && s[i].e!=s[i-1].e)p=i;
+        if(p+1<s[i].r){
+            s[i].r=p+1;
             s[i].sub="E";
         }
-        else if(i+1==s[i].r)
+        else if(p+1==s[i].r)
             s[i].sub="E";
     }
     sort(s,s+n,cmp3);
+    p=0;
     for(int i=0;i<n;i++){
-        if(i+1<s[i].r){
-            s[i].r=i+1;
+        if(i && s[i].m!=s[i-1].m)p=i;
+        if(p+1<s[i].r){
+            s[i].r=p+1;
             s[i].sub="M";
         }
-        else if(i+1==s[i].r)
+        else if(p+1==s[i].r)
             s[i].sub="M";
     }
     sort(s,s+n,cmp2);
+    p=0;
     for(int i=0;i<n;i++){
-        if(i+1<s[i].r){
-            s[i].r=i+1;
+        if(i && s[i].c!=s[i-1].c)p=i;
+        if(p+1<s[i].r){
+            s[i].r=p+1;
             s[i].sub="C";
         }
-        else if(i+1==s[i].r)
+        else if(p+1==s[i].r)
             s[i].sub="C";
     }
     sort(s,s+n,cmp1);
+    p=0;
     for(int i=0;i<n;i++){
-        if(i+1<s[i].r){
-            s[i].r=i+1;
+        if(i && s[i].a!=s[i-1].a)p=i;
+        if(p+1<s[i].r){
+            s[i].r=p+1;
             s[i].sub="A";
         }
-        else if(i+1==s[i].r)
+        else if(p+1==s[i].r)
             s[i].sub="A";
     }
     for(int i=0;i<m;i++){
@@ -84,9 +92,6 @@ int main(){
         }
         if(!f)printf("N/A\n");
     }
-//    for(int i=0;i<n;i++){
-//        printf("%s %d %d %d %d\n",s[i].id.c_str(),s[i].c,s[i].m,s[i].c,s[i].a);
-//    }
     return 0;
 }
-*/
+
