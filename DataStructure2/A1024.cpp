@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2020/2/12.
 //  Copyright © 2020 none. All rights reserved.
-//  9:25 9:41
+//  9:25 9:41 10:52 11:20
 /*
 #include <stdio.h>
 #include <stdio.h>
@@ -34,17 +34,16 @@ int main(){
     long long p=k;
     bool f=false;
     for(int i=0;i<k;i++){
-        s2=rev(s1);
-        if(judge(s1) && judge(s2)){
+        if(judge(s1)){
             f=true;
             p=i;
             break;
         }
         else{
-            s1=to_string(stoll(s1)+stoll(s2));
+            n=stoll(s1)+stoll(s2);
+            s1=to_string(n);
         }
     }
     printf("%s\n%lld",s1.c_str(),p);
     return 0;
 }*/
-
