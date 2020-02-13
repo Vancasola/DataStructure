@@ -72,4 +72,4 @@ int main(){
         printf("%s %d %d %d\n",v[i].id.c_str(),v[i].fr,v[i].pos,v[i].lr);
     }
     return 0;
-}
+}*/
