@@ -5,7 +5,7 @@
 //
 //  Created by vancasola on 2020/2/14.
 //  Copyright © 2020 none. All rights reserved.
-//  9:55 10:03;
+//  4:56 5:13
 /*
 #include <stdio.h>
 #include <string>
@@ -13,38 +13,30 @@
 #include <iostream>
 #include <algorithm>
 using namespace std;
-bool modify(string& s){
-    bool f=false;
-    for(int i=0;i<s.size();i++){
-        if(s[i]=='l'){s[i]='L';f=true;}
-        else if(s[i]=='0'){s[i]='%';f=true;}
-        else if(s[i]=='1'){s[i]='@';f=true;}
-        else if(s[i]=='O'){s[i]='o';f=true;}
-    }
-    return f;
-}
 int main(){
-    int n;
-    string a,b;
-    vector<pair<string,string>> v;
-    cin>>n;
-    for(int i=0;i<n;i++){
-        cin>>a>>b;;
-        if(modify(b)){
-            v.push_back(pair<string, string>(a,b));
+    int n1,n2,n3,t,N;
+    string s;
+    cin>>s;
+    N=s.size();
+    for( n2=3;n2<=N;n2++){
+        int t=N+2-n2;
+        if(t%2)continue;
+        else if(t/2<=n2){
+            n1=n3=t/2;
+            break;
         }
     }
-    if(v.size()){
-        printf("%d\n",v.size());
-        for(int i=0;i<v.size();i++){
-            printf("%s %s\n",v[i].first.c_str(),v[i].second.c_str());
+    int p=0,q=s.size()-1;
+    for(int i=0;i<n1-1;i++){
+        for(int j=0;j<n2-2;j++){
+            if(j==0)printf("%c",s[p++]);
+            printf(" ");
+            if(j==n2-3)printf("%c\n",s[q--]);
         }
     }
-    else{
-        if(n<=1)printf("There is %d account and no account is modified",n);
-        else printf("There are %d accounts and no account is modified",n);
+    while(p!=q+1){
+        printf("%c",s[p++]);
     }
     return 0;
 }
-
 */
