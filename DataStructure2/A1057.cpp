@@ -4,9 +4,8 @@
 //
 //  Created by vancasola on 2020/2/14.
 //  Copyright © 2020 none. All rights reserved.
-//  4:30 4:56
+//  4:30 4:56 5:13 5:21
 /*
-#include <stdio.h>
 #include <stdio.h>
 #include <string>
 #include <vector>
@@ -48,16 +47,15 @@ int main(){
                 int sum=0,j=0,cnt=0;
                 if(s.size()%2==0)cnt=s.size()/2;
                 else cnt=(s.size()+1)/2;
-                for( j=0;j<len;j++){
+                for( j=0;j<=len;j++){
                     sum+=b[j];
                     if(sum>=cnt){
                         sum-=b[j];
-                        j--;
                         break;
                     }
                 }
                 //j=len*max(0,j);
-                j=len*max(0,j-1);
+                j=len*max(0,j);
                 for(;j<maxn;j++){
                     sum+=tbl[j];
                     if(sum>=cnt){
