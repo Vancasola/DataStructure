@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2020/2/15.
 //  Copyright © 2020 none. All rights reserved.
-//  4:23 4:29 4:37/
+//  4:23 4:29 4:37/ 4:49 4:56
 /*
 #include <stdio.h>
 #include <string>
@@ -15,21 +15,29 @@
 using namespace std;
 int main(){
     int n,m,t;
-    bool f=false,v[1001]={false};
+    bool f=false;
+    vector<int> v;
+    unordered_map<int,int> p;
     cin>>n>>m;
     for(int i=0;i<n;i++){
         scanf("%d",&t);
-        v[t]=true;
+        v.push_back(t);
+        p[t]++;
     }
-    //sort(a,a+n);
-    for(int i=1;i<1001;i++){
-        if(v[i] && v[m-i] && i!=m-i){
-            printf("%d %d",i,m-i);
-            f=true;
+    sort(v.begin(),v.end());
+    for(int i=0;i<v.size();i++){
+        if(p.find(m-v[i])!=p.end()){
+            if(v[i]==m-v[i] && p[v[i]]>=2){
+                printf("%d %d",v[i],v[i]);
+                return 0;
+            }
+            else if(v[i]!=m-v[i]){
+                printf("%d %d",v[i],m-v[i]);
+                return 0;
+            }
         }
-        if(f)break;
     }
-    if(!f)printf("No Solution\n");
+    printf("No Solution\n");
     return 0;
 }
 */
