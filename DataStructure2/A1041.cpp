@@ -2,46 +2,35 @@
 //  A1041.cpp
 //  DataStructure
 //
-//  Created by vancasola on 2020/2/14.
+//  Created by vancasola on 2020/2/15.
 //  Copyright © 2020 none. All rights reserved.
-//  4:22 4:30
+//  9:38 9:40
 /*
-#include <stdio.h>
 #include <stdio.h>
 #include <string>
 #include <vector>
 #include <iostream>
 #include <algorithm>
+#include <unordered_map>
 using namespace std;
 int main(){
-    string s;
-    getline(cin,s);
-    int ans=1;
-    for(int i=1;i<s.size();i++){
-        if(s[i-1]==s[i+1]){
-            int sum=1;
-            for(int j=1;i+j<s.size() && i-j>=0;j++){
-                if(s[i-j]==s[i+j]){
-                    sum+=2;
-                }
-                else break;
-            }
-            if(sum>ans)ans=sum;
+    unordered_map<int,int> p;
+    vector<int> v;
+    int n,t;
+    cin>>n;
+    for(int i=0;i<n;i++){
+        scanf("%d",&t);
+        p[t]++;
+        v.push_back(t);
+    }
+    for(int i=0;i<n;i++){
+        if(p[v[i]]==1){
+            printf("%d",v[i]);
+            return 0;
         }
     }
-    for(int i=0;i<s.size();i++){
-        if(s[i]==s[i+1]){
-            int sum=0;
-            for(int j=1;i+j<s.size() && i-j+1>=0;j++){
-                if(s[i-j+1]==s[i+j]){
-                    sum+=2;
-                }
-                else break;
-            }
-            if(sum>ans)ans=sum;
-        }
-    }
-     printf("%d",ans);
+    printf("None");
     return 0;
 }
+
 */
