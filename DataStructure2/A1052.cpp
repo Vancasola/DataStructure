@@ -4,64 +4,40 @@
 //
 //  Created by vancasola on 2020/2/15.
 //  Copyright © 2020 none. All rights reserved.
-//  10:06 10:18
+//  9:50 10:06
 /*
 #include <stdio.h>
 #include <string>
 #include <vector>
-#include <queue>
 #include <iostream>
 #include <algorithm>
 #include <unordered_map>
 using namespace std;
 struct node{
-    int x;
-    node* lc,*rc;
-};
-void insert(node*& r,int x){
-    if(r==NULL){
-        r=new node;
-        r->x=x;
-        r->lc=r->rc=NULL;
-        return;
-    }
-    if(x<=r->x)insert(r->lc,x);
-    if(x>r->x)insert(r->rc, x);
+    int x,addr,next;
+}a[100005],b[100005];
+bool cmp(const node& a,const node& b){
+    return a.x<b.x;
 }
-int n1=0,n2=0;
-void layerorder(node* r){
-    queue<node*>q,p;
-    node* t;
-    q.push(r);
-    while(!q.empty()){
-        t=q.front();
-        p=q;
-        int sum=0;
-        while(!q.empty())q.pop();
-        while(!p.empty()){
-            sum++;
-            t=p.front();
-            p.pop();
-            if(t->lc!=NULL)q.push(t->lc);
-            if(t->rc!=NULL)q.push(t->rc);
-        }
-        n1=n2;
-        n2=sum;
-    }
-    return ;
-}
-int n;
 int main(){
-    int t;
-    node* root=NULL;
-    cin>>n;
+    int h,n,addr,x,next,i,p;
+    cin>>n>>h;
+    if(!n)return 0;
+    if(h==-1){printf("0 -1");return 0;}
+    bool f=false;
     for(int i=0;i<n;i++){
-        scanf("%d",&t);
-        insert(root, t);
+        scanf("%d %d %d",&addr,&x,&next);
+        a[addr].addr=addr;
+        a[addr].x=x;
+        a[addr].next=next;
     }
-    layerorder(root);
-    printf("%d + %d = %d",n2,n1,n1+n2);
-    
+    for( i=h,p=0;i!=-1;i=a[i].next,p++)
+        b[p]=a[i];
+    sort(b,b+p,cmp);
+    printf("%d %05d\n",p,b[0].addr);
+    for(int i=0;i<p-1;i++)
+        printf("%05d %d %05d\n",b[i].addr,b[i].x,b[i+1].addr);
+    printf("%05d %d %d",b[p-1].addr,b[p-1].x,-1);
     return 0;
 }
 */
