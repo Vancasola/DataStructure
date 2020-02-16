@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2020/2/16.
 //  Copyright © 2020 none. All rights reserved.
-//  10:31 10:48 11:42 11:47
+//  10:31 10:48 11:42 11:47 12:18 12:31
 /*
 #include <stdio.h>
 #include <string>
@@ -19,7 +19,7 @@ struct node{
 }a[100005];
 bool cmp(const node& a,const node& b){
     if(a.w!=b.w)return a.w>b.w;
-    else if(a.age!=a.age)return a.age<b.age;
+    else if(a.age!=b.age)return a.age<b.age;
     return a.id<b.id;
 }
 int main(){
@@ -32,11 +32,9 @@ int main(){
     sort(a,a+n,cmp);
     for(int i=0;i<m;i++){
         scanf("%d %d %d",&k,&l,&r);
-        vector<node> v;
         printf("Case #%d:\n",i+1);
         int cnt=0;
         for(int j=0;j<n;j++){
-            //if(a[j].age>r)break;
             if(a[j].age>=l && a[j].age<=r){
                 cnt++;
                 printf("%s %d %d\n",a[j].id.c_str(),a[j].age,a[j].w);

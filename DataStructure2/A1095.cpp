@@ -47,11 +47,6 @@ int main(){
     sort(a,a+n,cmp1);
     vector<node> v;
     vector<string> ans;
-//    for(int i=0;i<n;i++){
-//        printf("%s ",a[i].id.c_str());
-//        int t=a[i].t;
-//        printf("%02d:%02d:%02d %d\n",t/3600,t/60-60*(t/3600),t%60,a[i].f);
-//    }
     int Max=-1;
     for(int i=1;i<n;i++){
         if(a[i-1].id==a[i].id && a[i-1].f==true && a[i].f==false){
@@ -73,11 +68,6 @@ int main(){
         else if(it->second==Max)ans.push_back(it->first);
     }
     sort(v.begin(),v.end(),cmp2);
-//    for(int i=0;i<v.size();i++){
-//        printf("%s ",v[i].id.c_str());
-//        printf("%02d:%02d:%02d ",v[i].in/3600,v[i].in/60-60*(v[i].in/3600),v[i].in%60);
-//        printf("%02d:%02d:%02d\n",v[i].out/3600,v[i].out/60-60*(v[i].out/3600),v[i].out%60);
-//    }
     for(int j=0;j<m;j++){
         scanf("%d:%d:%d",&hh,&mm,&ss);
         int t=hh*3600+mm*60+ss;
