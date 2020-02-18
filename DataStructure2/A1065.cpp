@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2020/2/18.
 //  Copyright © 2020 none. All rights reserved.
-//  10:58 11:05
+//  10:58 11:05 1:46 1:48
 /*
 #include <stdio.h>
 #include <string>
@@ -22,6 +22,7 @@ int main(){
         t=a+b;
         printf("Case #%d: ",i+1);
         if(a>0&&b>0&&t<0)printf("true\n");
+        else if(a<0&&b<0&&t>=0)printf("false\n");
         else {
             if(t>c)printf("true\n");
             else printf("false\n");
@@ -29,8 +30,4 @@ int main(){
     }
     return 0;
 }
-//
-//Case #1: false
-//Case #2: true
-//Case #3: false
 */
