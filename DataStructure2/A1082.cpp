@@ -4,8 +4,8 @@
 //
 //  Created by vancasola on 2020/2/21.
 //  Copyright © 2020 none. All rights reserved.
-//  7:55 8:26
-/*
+//  7:55 8:26 10:03
+
 #include <stdio.h>
 #include <string>
 #include <vector>
@@ -15,32 +15,49 @@
 #include <queue>
 #include <cmath>
 using namespace std;
-string a[3]={"Qian","Bai","Shi"};
-string b[10]={"ling","yi","er","san","si","wu","liu","qi","ba","jiu"};
-int main(){
+string w1[4]={"","Shi","Bai","Qian"};
+int main()
+{
     string s;
+    int t=0;
+    string num[10]={"ling","yi","er","san","si","wu","liu","qi","ba","jiu"};;
     cin>>s;
-    if(s[0]=='-'){
-        printf("Fu");
-        s=s.substr(1,s.size());
+    if(s.size() && s[0]=='0'){
+        printf("ling");
+        return 0;
     }
-    for(int i=0;i<s.size();i++){
-        //cout<<s[i]-'0';
-        printf(" %s",b[s[i]-'0'].c_str());
-        if(i==s.size()-1)break;
-        if((s.size()-i-1)==8){
-            printf(" Yi");
+    if(s[0]=='-'){
+        s=s.substr(1,s.size());
+        cout<<"Fu ";
+    }
+    bool f=false;
+    t=s[0]-'0';
+    if(!t)f=true;
+    if(t)
+    {
+        if(f)cout<<num[0];
+        cout<<num[t];
+        f=false;
+    }
+    if((s.size())%9==0)cout<<" Yi";
+    if((s.size())%5==0)cout<<" Wan";
+    if(w1[(s.size()-1)%4]!="")cout<<' '<<w1[(s.size()-1)%4];
+    else cout<<w1[(s.size()-1)%4];
+    for(int i=1;i<s.size();i++)
+    {
+        t=s[i]-'0';
+        if(!t)f=true;
+        if(t)
+        {
+            if(f)cout<<' '<<num[0];
+            cout<<' '<<num[t];
+            f=false;
         }
-        else if((s.size()-i-1)==4){
-            printf(" Wan");
-        }
-        else{
-            int t=(i-1)%4;
-            printf(" %s",a[t].c_str());
-        }
-        
+        if((s.size()-i)%9==0)cout<<" Yi";
+        if((s.size()-i)%5==0)cout<<" Wan";
+        if(!t)continue;
+        if(w1[(s.size()-i-1)%4]!="")cout<<' '<<w1[(s.size()-i-1)%4];
+        else cout<<w1[(s.size()-i-1)%4];
     }
     return 0;
 }
-//Fu yi Yi er Qian san Bai si Shi wu Wan liu Qian qi Bai ba Shi jiu
-*/
