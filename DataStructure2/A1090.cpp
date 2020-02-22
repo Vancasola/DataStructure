@@ -4,8 +4,8 @@
 //
 //  Created by vancasola on 2020/2/22.
 //  Copyright © 2020 none. All rights reserved.
-//  10:23
-
+//  10:23 10:32
+/*
 #include <stdio.h>
 #include <string>
 #include <vector>
@@ -46,3 +46,4 @@ int main(){
     printf("%.2lf %d",Max,num);
     return 0;
 }
+*/
