@@ -4,7 +4,7 @@
 //
 //  Created by vancasola on 2020/2/22.
 //  Copyright © 2020 none. All rights reserved.
-//  10:32 10:46
+//  10:32 10:46 11:23 11:24
 /*
 #include <stdio.h>
 #include <string>
@@ -27,7 +27,8 @@ int main(){
     }
     for(int i=1;i<s.size()-1;i++){
         if(s[i]=='A'){
-            sum+=(a[i]*b[i])%1000000007;
+            sum+=(a[i]*b[i]);
+            sum%=1000000007;
         }
     }
     printf("%d",sum);
