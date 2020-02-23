@@ -27,6 +27,7 @@ int main(){
         rmin[i]=MIN;
         if(a[i]<MIN)MIN=a[i];
     }
+    printf("\n");
     for(int i=0;i<n;i++){
         bool f=false;
         if(a[i]>lmax[i]&& a[i]<rmin[i])v.push_back(a[i]);
@@ -39,4 +40,5 @@ int main(){
         else printf("%d",v[i]);
     }
 }
+
 */
