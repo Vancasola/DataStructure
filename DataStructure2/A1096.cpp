@@ -18,46 +18,29 @@ int main(){
     int n,t;
     vector<int> v,m;
     cin>>n;
-    t=n;
-//    for(int i=2;i<=sqrt(t)+1;i++){
-//        if(n<=1 || n%i){
-//            n=t;
-//            if(m.size()<v.size())m=v;
-//            v.clear();
-//        }
-//        else if(n%i==0){
-//            n/=i;
-//            v.push_back(i);
-//        }
-//    }
-    int maxn=sqrt(n)+1,len=-1,j,begin;
-    for(int i=2;i<=maxn;i++){
+    t=1;
+    for(int i=2;i<=sqrt(n)+1;i++){
         t=1;
-        for( j=i;j<=maxn;j++){
+        for(int j=i;j<=sqrt(n)+1;j++){
             t*=j;
-            if(n%t!=0){break;}
+            if(n%t)break;
+            v.push_back(j);
         }
-        if(j-i>len){
-            len=j-i;
-            begin=i;
-        }
+        t=1;
+        if(m.size()<v.size())m=v;
+        v.clear();
     }
-//    if(!m.size()){
-//        printf("%d\n%d",1,n);
-//        return 0;
-//    }
-    if(!len){
+    if(m.size()<v.size())m=v;
+
+    if(!m.size()){
         printf("%d\n%d",1,n);
         return 0;
     }
-    printf("%d\n",len);
-    printf("%d",begin);
-    for(int i=begin+1;i<begin+len;i++)printf("*%d",i);
-//    printf("%d\n",m.size());
-//    for(int i=0;i<m.size();i++){
-//        if(i)printf("*%d",m[i]);
-//        else printf("%d",m[i]);
-//    }
+    printf("%d\n",m.size());
+    for(int i=0;i<m.size();i++){
+        if(i)printf("*%d",m[i]);
+        else printf("%d",m[i]);
+    }
     return 0;
 }
 
