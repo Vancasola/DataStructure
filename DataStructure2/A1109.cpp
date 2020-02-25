@@ -31,9 +31,6 @@ int main(){
         v.push_back(pair<string, int>(id,h));
     }
     sort(v.begin(),v.end(),cmp);
-//    for(int i=0;i<n;i++){
-//        printf("%s %d\n",v[i].first.c_str(),v[i].second);
-//    }
     int x=0;
     //cout<<(n-(k-1)*(n/k))/2<<endl;
     for(int i=0;i<k;i++){
