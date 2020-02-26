@@ -24,13 +24,23 @@ int main(){
         v.push_back(t);
     }
     sort(v.begin(),v.end(),greater<int>());
-    int e=0;
-    while(e < n && v[e] > e+1){
-        e++;
+    for(int e=0;e<n;e++){
+        int sum=0;
+        for(int i=0;i<n;i++){
+            if(v[i]>e)sum++;
+            else break;
+        }
+        if(sum<e)
+        {
+            printf("%d\n",e-1);
+            return 0;
+        }
     }
-    printf("%d",e);
+//    int e=0;
+//    while(e < n && v[e] > e+1){
+//        e++;
+//    }
+//    printf("%d",e);
     return 0;
 }
 */
-
- 
