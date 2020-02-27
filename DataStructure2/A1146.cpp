@@ -29,9 +29,8 @@ int main(){
     vector<int> ans;
     for(int i=0;i<k;i++){
         fill(vis,vis+n+5,false);
-        for(int j=0;j<n;j++){
+        for(int j=0;j<n;j++)
             scanf("%d",&c[j]);
-        }
         bool f=true;
         for(int j=0;j<n;j++){
             for(int k=0;k<v[c[j]].size();k++){
