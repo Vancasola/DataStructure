@@ -45,9 +45,8 @@ int main(){
     }
     for(int i=0;i<m;i++){
         cin>>str>>x;
-        if(p.find(str)!=p.end()){
+        if(p.find(str)!=p.end())
             v[p[str]].m=x;
-        }
     }
     for(int i=0;i<k;i++){
         cin>>str>>x;
