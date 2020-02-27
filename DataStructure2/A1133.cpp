@@ -45,9 +45,8 @@ int main(){
         if(!a[i].f)v.push_back(a[i]);
     }
     if(v.size()){
-        for(int i=0;i<v.size()-1;i++){
+        for(int i=0;i<v.size()-1;i++)
             printf("%05d %d %05d\n",v[i].addr,v[i].x,v[i+1].addr);
-        }
         printf("%05d %d -1\n",v.back().addr,v.back().x);
     }
     return 0;
