@@ -61,9 +61,8 @@ int main(){
         }
     }
     
-    for(int i=0;i<v.size();i++){
+    for(int i=0;i<v.size();i++)
         v[i].tws=v[i].a+v[i].b/1.5+v[i].t*1.5;
-    }
     sort(v.begin(),v.end(),cmp);
     int r=1;
     v[0].r=r;
