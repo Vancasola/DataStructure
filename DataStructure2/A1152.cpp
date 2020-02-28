@@ -22,12 +22,13 @@ bool isprime(int x){
         if(x%i==0)return false;
     return true;
 }
+
 int main(){
     int n,m,x;
     string s,t;
     cin>>n>>m>>s;
     if(m>s.size()){printf("404");return 0;}
-    for(int i=0;i<s.size()-m;i++){
+    for(int i=0;i<=s.size()-m;i++){
         t=s.substr(i,m);
         x=stoi(t);
         if(isprime(x)){
@@ -39,4 +40,3 @@ int main(){
     return 0;
 }
 */
- 
