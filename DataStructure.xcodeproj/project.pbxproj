@@ -36,6 +36,7 @@
 		DF18FBE523B2298B0040940A /* A1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF18FBE423B2298B0040940A /* A1001.cpp */; };
 		DF18FBE723B22EDE0040940A /* A1002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF18FBE623B22EDE0040940A /* A1002.cpp */; };
 		DF18FBE923B2398B0040940A /* A1004.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF18FBE823B2398B0040940A /* A1004.cpp */; };
+		DF19F61A240F9DFE007BC750 /* A1007.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF19F619240F9DFE007BC750 /* A1007.cpp */; };
 		DF1A7B0823F7DE7100F3039A /* A1046.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF1A7B0723F7DE7100F3039A /* A1046.cpp */; };
 		DF1A7B0A23F7DE7C00F3039A /* A1047.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF1A7B0923F7DE7C00F3039A /* A1047.cpp */; };
 		DF1A7B0C23F7DE8200F3039A /* A1048.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF1A7B0B23F7DE8200F3039A /* A1048.cpp */; };
@@ -392,6 +393,7 @@
 		DF18FBE423B2298B0040940A /* A1001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1001.cpp; sourceTree = "<group>"; };
 		DF18FBE623B22EDE0040940A /* A1002.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1002.cpp; sourceTree = "<group>"; };
 		DF18FBE823B2398B0040940A /* A1004.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1004.cpp; sourceTree = "<group>"; };
+		DF19F619240F9DFE007BC750 /* A1007.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1007.cpp; sourceTree = "<group>"; };
 		DF1A7B0723F7DE7100F3039A /* A1046.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1046.cpp; sourceTree = "<group>"; };
 		DF1A7B0923F7DE7C00F3039A /* A1047.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1047.cpp; sourceTree = "<group>"; };
 		DF1A7B0B23F7DE8200F3039A /* A1048.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1048.cpp; sourceTree = "<group>"; };
@@ -938,6 +940,7 @@
 			isa = PBXGroup;
 			children = (
 				DF8307ED240E4F2200624DE7 /* A1002.cpp */,
+				DF19F619240F9DFE007BC750 /* A1007.cpp */,
 			);
 			path = DataStructure3;
 			sourceTree = "<group>";
@@ -1273,6 +1276,7 @@
 				DFD7445722EF3EAD00D6C685 /* A1069B1019.cpp in Sources */,
 				DF5B0F5723FB897E00AD5C49 /* A1067.cpp in Sources */,
 				DFF06F8E23FBD4DF002E0ABC /* A1061.cpp in Sources */,
+				DF19F61A240F9DFE007BC750 /* A1007.cpp in Sources */,
 				DF15304223FA276D00E21D69 /* A1058.cpp in Sources */,
 				DF7E224422EFF53D00D62E04 /* c1928.cpp in Sources */,
 				DF9C090F24064EAB00A38071 /* A1124.cpp in Sources */,
