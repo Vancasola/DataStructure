@@ -352,6 +352,7 @@
 		DFFD3D7F23F38F330015BF24 /* A1012.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3D7E23F38F330015BF24 /* A1012.cpp */; };
 		DFFD3D8123F38F390015BF24 /* A1013.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3D8023F38F390015BF24 /* A1013.cpp */; };
 		DFFD3D8323F38F400015BF24 /* A1038.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFD3D8223F38F400015BF24 /* A1038.cpp */; };
+		DFFE45CA2415CF2E00A9A216 /* A1145.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFE45C92415CF2E00A9A216 /* A1145.cpp */; };
 		DFFF017C230C3D0D000614C1 /* kruscal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFFF017B230C3D0D000614C1 /* kruscal.cpp */; };
 /* End PBXBuildFile section */
 
@@ -717,6 +718,7 @@
 		DFFD3D7E23F38F330015BF24 /* A1012.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1012.cpp; sourceTree = "<group>"; };
 		DFFD3D8023F38F390015BF24 /* A1013.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1013.cpp; sourceTree = "<group>"; };
 		DFFD3D8223F38F400015BF24 /* A1038.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1038.cpp; sourceTree = "<group>"; };
+		DFFE45C92415CF2E00A9A216 /* A1145.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1145.cpp; sourceTree = "<group>"; };
 		DFFF017B230C3D0D000614C1 /* kruscal.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = kruscal.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -950,6 +952,7 @@
 				DF8307ED240E4F2200624DE7 /* A1002.cpp */,
 				DF19F619240F9DFE007BC750 /* A1007.cpp */,
 				DFBC045A24123DBC00DFF4CF /* A1010.cpp */,
+				DFFE45C92415CF2E00A9A216 /* A1145.cpp */,
 				DFC7A16324109FB4004D1016 /* A1046.cpp */,
 				DF5E3E7E2413792900E38E86 /* A1096.cpp */,
 				DF2947E62414D9D9003B4D8F /* A1128.cpp */,
@@ -1237,6 +1240,7 @@
 				DFF06F9423FBE735002E0ABC /* A1083.cpp in Sources */,
 				DF3004AB2400C4A1003EA6F7 /* A1084.cpp in Sources */,
 				DF6A15FE2404B21C00E72DC6 /* A1112.cpp in Sources */,
+				DFFE45CA2415CF2E00A9A216 /* A1145.cpp in Sources */,
 				DF15304C23FA316F00E21D69 /* A1063.cpp in Sources */,
 				DFCA763023F3BFB1006EF299 /* A1016.cpp in Sources */,
 				DF23EE48240768F20084D0C3 /* A1136.cpp in Sources */,
