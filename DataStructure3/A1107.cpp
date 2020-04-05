@@ -5,7 +5,7 @@
 //  Created by vancasola on 2020/4/4.
 //  Copyright © 2020 none. All rights reserved.
 //
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <iostream>
@@ -63,3 +63,4 @@ int main(){
         else printf("%d",v[i]);
     }
 }
+*/
