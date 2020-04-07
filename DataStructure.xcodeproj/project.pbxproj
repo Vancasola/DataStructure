@@ -290,6 +290,7 @@
 		DFA7B16823BB5B0C00922F63 /* A1031.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA7B16723BB5B0C00922F63 /* A1031.cpp */; };
 		DFA7B16A23BB61AE00922F63 /* A1036.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA7B16923BB61AE00922F63 /* A1036.cpp */; };
 		DFA8A5552425B2A500473866 /* A1051.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA8A5542425B2A500473866 /* A1051.cpp */; };
+		DFA98193243C665D0024385E /* A1034.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFA98192243C665D0024385E /* A1034.cpp */; };
 		DFAAC5B022B0E8DA00DF0EF0 /* QuickSort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */; };
 		DFAD776F23DED7A100253FDB /* A1064.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFAD776E23DED7A100253FDB /* A1064.cpp */; };
 		DFAD777123DEDBE200253FDB /* A1067.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFAD777023DEDBE200253FDB /* A1067.cpp */; };
@@ -683,6 +684,7 @@
 		DFA7B16723BB5B0C00922F63 /* A1031.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1031.cpp; sourceTree = "<group>"; };
 		DFA7B16923BB61AE00922F63 /* A1036.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1036.cpp; sourceTree = "<group>"; };
 		DFA8A5542425B2A500473866 /* A1051.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1051.cpp; sourceTree = "<group>"; };
+		DFA98192243C665D0024385E /* A1034.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1034.cpp; sourceTree = "<group>"; };
 		DFAAC5AE22B0E8DA00DF0EF0 /* QuickSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = QuickSort.cpp; sourceTree = "<group>"; };
 		DFAAC5AF22B0E8DA00DF0EF0 /* QuickSort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = QuickSort.hpp; sourceTree = "<group>"; };
 		DFAD776E23DED7A100253FDB /* A1064.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1064.cpp; sourceTree = "<group>"; };
@@ -1008,6 +1010,7 @@
 				DF8307ED240E4F2200624DE7 /* A1002.cpp */,
 				DF19F619240F9DFE007BC750 /* A1007.cpp */,
 				DFBC045A24123DBC00DFF4CF /* A1010.cpp */,
+				DFA98192243C665D0024385E /* A1034.cpp */,
 				DF59595F242CA15600DAEAD2 /* A1039.cpp */,
 				DF20178B2424AC93005ECA21 /* A1044.cpp */,
 				DFC7A16324109FB4004D1016 /* A1046.cpp */,
@@ -1625,6 +1628,7 @@
 				DF5B7B0423F82B8800C4D196 /* A1052.cpp in Sources */,
 				DFD0A1C52408A7630046E352 /* A1153.cpp in Sources */,
 				DF30D25F23E8520800C62DA0 /* A1107.cpp in Sources */,
+				DFA98193243C665D0024385E /* A1034.cpp in Sources */,
 				DFCA763423F3BFC5006EF299 /* A1064.cpp in Sources */,
 				DF2A91FA23FA901800B1BB46 /* A1070.cpp in Sources */,
 				DF8307EE240E4F2200624DE7 /* A1002.cpp in Sources */,
