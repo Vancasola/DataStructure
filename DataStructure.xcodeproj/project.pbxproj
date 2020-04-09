@@ -116,6 +116,7 @@
 		DF4D096F23F8DFAF00983A99 /* A1056.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF4D096E23F8DFAF00983A99 /* A1056.cpp */; };
 		DF4D097123F8DFB700983A99 /* A1095.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF4D097023F8DFB700983A99 /* A1095.cpp */; };
 		DF4D870822FB1D7100EBBED3 /* disjoint set.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF4D870722FB1D7100EBBED3 /* disjoint set.cpp */; };
+		DF528DE4243F0E3D0013831E /* A1122.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF528DE3243F0E3D0013831E /* A1122.cpp */; };
 		DF54886123E9567800AB180B /* A1135.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF54886023E9567800AB180B /* A1135.cpp */; };
 		DF54886323E959F200AB180B /* A1139.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF54886223E959F200AB180B /* A1139.cpp */; };
 		DF54886523E978CA00AB180B /* A1143.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DF54886423E978CA00AB180B /* A1143.cpp */; };
@@ -509,6 +510,7 @@
 		DF4D096E23F8DFAF00983A99 /* A1056.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1056.cpp; sourceTree = "<group>"; };
 		DF4D097023F8DFB700983A99 /* A1095.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1095.cpp; sourceTree = "<group>"; };
 		DF4D870722FB1D7100EBBED3 /* disjoint set.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "disjoint set.cpp"; sourceTree = "<group>"; };
+		DF528DE3243F0E3D0013831E /* A1122.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1122.cpp; sourceTree = "<group>"; };
 		DF54886023E9567800AB180B /* A1135.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1135.cpp; sourceTree = "<group>"; };
 		DF54886223E959F200AB180B /* A1139.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1139.cpp; sourceTree = "<group>"; };
 		DF54886423E978CA00AB180B /* A1143.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1143.cpp; sourceTree = "<group>"; };
@@ -1033,6 +1035,7 @@
 				DFF98503243582820003C647 /* A1115.cpp */,
 				DF768F7E2420B8E6007EAC17 /* A1118.cpp */,
 				DFB3309024177CCC00D1BABF /* A1119.cpp */,
+				DF528DE3243F0E3D0013831E /* A1122.cpp */,
 				DF009A6724349D7E007D4A68 /* A1125.cpp */,
 				DF9A596024305F5C00CE21B5 /* A1127.cpp */,
 				DF2947E62414D9D9003B4D8F /* A1128.cpp */,
@@ -1435,6 +1438,7 @@
 				DFBD816D23C8C0C000215979 /* A1104.cpp in Sources */,
 				DF69E5D023F4329D008D588F /* A1021.cpp in Sources */,
 				DFF09BB123BE23CC00D9C296 /* A1040.cpp in Sources */,
+				DF528DE4243F0E3D0013831E /* A1122.cpp in Sources */,
 				DF988C8423E7F9460064BEE1 /* A1154.cpp in Sources */,
 				DF9C091324064EC200A38071 /* A1129.cpp in Sources */,
 				DF83837D23CA0887009EE87C /* A1116.cpp in Sources */,
