@@ -56,3 +56,48 @@ int main(){
     return 0;
 }
 */
+
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <cmath>
+#include <queue>
+#include <iostream>
+#include <map>
+using namespace std;
+bool judge(int a,int b,int c)
+{
+    if(a+b>c&&a+c>b&&b+c>a)return true;
+    else return false;
+}
+int main(){
+    long long a,b,s=1;
+    cin>>a>>b;
+    s=1;
+    while(a){
+        if(s>1000000000){
+            s%=1000000000;
+        }
+        s*=a;
+        a--;
+    }
+    string r,x=to_string(s);
+    //cout<<x<<endl;
+    int k=0;
+    for(int i=x.size()-1;i>=0;i--){
+        if(x[i]=='0')k++;
+        else{
+            for(int j=i;j>=0&&i-j<b;j--){
+                r.push_back(x[j]);
+            }
+            break;
+        }
+        
+    }
+    for(int i=r.size()-1;i>=0;i--)printf("%c",r[i]);
+    printf(" %d",k);
+}
+
+//Bu ChuiZi ChuiZi ChuiZi JianDao Bu Bu JianDao ChuiZi ChuiZi ChuiZi JianDao JianDao
