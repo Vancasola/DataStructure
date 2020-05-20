@@ -56,7 +56,7 @@ int main(){
     return 0;
 }
 */
-
+/*
 #include <stdio.h>
 #include <iostream>
 #include <vector>
@@ -65,39 +65,72 @@ int main(){
 #include <cmath>
 #include <queue>
 #include <iostream>
-#include <map>
 using namespace std;
-bool judge(int a,int b,int c)
-{
-    if(a+b>c&&a+c>b&&b+c>a)return true;
-    else return false;
-}
 int main(){
     long long a,b,s=1;
     cin>>a>>b;
+    int m=0;
+    for(int i=1;i<=a;i++){
+        if(i%5==0)m++;
+    }
+    int p=pow(10,b+m);
     s=1;
     while(a){
-        if(s>1000000000){
-            s%=1000000000;
-        }
-        s*=a;
+        s%=p;
+        s*=(a%p);
         a--;
     }
     string r,x=to_string(s);
-    //cout<<x<<endl;
     int k=0;
-    for(int i=x.size()-1;i>=0;i--){
-        if(x[i]=='0')k++;
-        else{
-            for(int j=i;j>=0&&i-j<b;j--){
-                r.push_back(x[j]);
-            }
-            break;
-        }
-        
+    k=b-(x.size()-m);
+    while(k--)printf("0");
+    for(int i=0;i<x.size()-m;i++){
+        printf("%c",x[i]);
     }
-    for(int i=r.size()-1;i>=0;i--)printf("%c",r[i]);
-    printf(" %d",k);
+    printf(" %d",m);
 }
-
-//Bu ChuiZi ChuiZi ChuiZi JianDao Bu Bu JianDao ChuiZi ChuiZi ChuiZi JianDao JianDao
+*/
+/*
+#include <stdio.h>
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <string>
+#include <cmath>
+#include <queue>
+#include <iostream>
+using namespace std;
+bool judge(int a,int b,int c)
+{
+    if(a+b>c){
+        if(a+c>b){
+            if(b+c>a)return true;
+            else return false;
+        }
+        else return false;
+    }
+    else return false;
+}
+int main(){
+    int n,m,t;
+    vector<int>v;
+    cin>>n>>m;
+    for(int i=0;i<n;i++){
+        scanf("%d",&t);
+        v.push_back(t);
+    }
+    int sum=0;
+    sort(v.begin(),v.end());
+    for(int i=0;i<n;i++)printf("%d ",v[i]);
+    for(int i=0;i<n;i++){
+        for(int j=i+1;j<n;j++){
+            if(judge(m,v[i],v[j])){
+                sum++;
+                //printf("%d %d\n",v[i],v[j]);
+            }
+            else break;
+        }
+    }
+    printf("%d",sum);
+}
+*/
