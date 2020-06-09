@@ -41,6 +41,29 @@ void layerorder(int r){
     }
     printf("YES %d",x);
 }
+void layerorder1(int r){
+    queue<int> q;
+    q.push(r);
+    int x=r;
+    bool f=true;
+    while(!q.empty()){
+        x=q.front();
+        q.pop();
+        if(!f&&v[x].lc!=-1){
+            printf("NO %d",r);
+            return;
+        }
+        if(v[x].lc==-1)f=false;
+        if(!f&&v[x].rc!=-1){
+            printf("NO %d",r);
+            return;
+        }
+        if(v[x].rc==-1)f=false;
+        if(v[x].lc!=-1)q.push(v[x].lc);
+        if(v[x].rc!=-1)q.push(v[x].rc);
+    }
+    printf("YES %d",x);
+}
 int main(){
     int n;
     string a,b;
@@ -64,7 +87,7 @@ int main(){
             s.erase(v[i].rc);
         }
     }
-    layerorder(*s.begin());
+    layerorder1(*s.begin());
     return 0;
 }
 */
