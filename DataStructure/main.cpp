@@ -112,3 +112,38 @@ int main()
     
 }
 */
+/*
+#include <cstdio>
+int partition(int low,int high,int a[]){
+    int p=a[low];
+    while(low<high){
+        while(low<high&&a[high]>p)--high;
+        a[low]=a[high];
+        while(low<high&&a[low]<p)++low;
+        a[high]=a[low];
+    }
+    a[low]=p;
+    return low;
+}
+void quicksort(int low,int high,int a[]){
+    if(low<high){
+        int p=partition(low, high, a);
+        quicksort(low, p-1, a);
+        quicksort(p+1, high, a);
+    }
+    return;
+}
+int main(){
+    int n;
+    int a[100];
+    scanf("%d",&n);
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+    quicksort(0, n-1, a);
+    for(int i=0;i<n;i++){
+        printf("%d",a[i]);
+    }
+    return 0;
+}
+*/
