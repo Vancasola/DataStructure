@@ -133,7 +133,34 @@ void quicksort(int low,int high,int a[]){
     }
     return;
 }
+ */
+/*
+#include <string>
+#include <iostream>
+using namespace std;
+void display(string&s,int next[]){
+    for(int i=1;i<=s.size();i++)
+        printf("%d ",next[i]);
+    printf("\n");
+}
+void get_next(string T,int next[]){
+    int i=1,j=-1;
+    next[0]=-1;
+    while(i<T.length()){
+        if(j!=-1&&T[i]!=T[j+1]){
+            j=next[j];
+        }
+        else{
+            
+        }
+            
+        printf("i: %d j: %d next[j]: %d\n",i,j,next[j]);display(T,next);
+    }
+}
+ */
+/*
 int main(){
+    /*
     int n;
     int a[100];
     scanf("%d",&n);
@@ -144,6 +171,12 @@ int main(){
     for(int i=0;i<n;i++){
         printf("%d",a[i]);
     }
+     */
+/*
+    string s;
+    cin>>s;
+    int next[100];
+    get_next(s, next);
     return 0;
 }
 */
