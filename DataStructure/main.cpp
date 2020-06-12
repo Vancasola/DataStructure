@@ -180,3 +180,16 @@ int main(){
     return 0;
 }
 */
+/*
+#include <iostream>
+using namespace std;
+int main(){
+    int sum=0;
+    int t;
+    while(1){
+        cin>>t;
+        sum+=t;
+        printf("%d\n",sum);
+    }
+}
+*/
