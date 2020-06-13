@@ -160,7 +160,6 @@ void get_next(string T,int next[]){
  */
 /*
 int main(){
-    /*
     int n;
     int a[100];
     scanf("%d",&n);
@@ -184,12 +183,10 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-    int sum=0;
-    int t;
-    while(1){
-        cin>>t;
-        sum+=t;
-        printf("%d\n",sum);
-    }
-}
-*/
+    int a=0x80000000;
+    short b=0x8000;
+    printf("%d %hx\n",b,b);
+    printf("%hd %x\n",a,a);
+    return 0;
+}*/
+
