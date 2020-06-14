@@ -183,10 +183,10 @@ int main(){
 #include <iostream>
 using namespace std;
 int main(){
-    int a=0x80000000;
-    short b=0x8000;
-    printf("%d %hx\n",b,b);
-    printf("%hd %x\n",a,a);
+    unsigned a=0x0001;
+    float b=0xc14c0000, *p=&b;
+    printf("%f %x\n",b,(*(unsigned long*)(p)));
+    printf("%d %x\n",a-127,a);
     return 0;
-}*/
-
+}
+*/
