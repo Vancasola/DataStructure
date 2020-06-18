@@ -189,4 +189,19 @@ int main(){
     printf("%d %x\n",a-127,a);
     return 0;
 }
-*/ 
+*/
+/*
+#include <cstdio>
+struct{
+    double a;
+    short b;
+    int c;
+    char d;
+    int f;
+}r;
+int main(){
+    r.a=273.0;
+    printf("%x %x %x %x %x %lu\n",&r.a,&r.b,&r.c,&r.d,&r.f,sizeof(r));
+    return 0;
+}
+*/
