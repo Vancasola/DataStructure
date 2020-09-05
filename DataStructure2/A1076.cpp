@@ -40,7 +40,7 @@ int bfs(int x){
             }
         }
         //cout<<sum<<endl;
-        layer++;
+        layer++;    
     }
     return sum;
 }

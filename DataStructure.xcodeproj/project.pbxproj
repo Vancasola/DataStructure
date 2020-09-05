@@ -379,6 +379,8 @@
 		DFD3DC6323FF69BD004C0B28 /* A1103.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD3DC6223FF69BD004C0B28 /* A1103.cpp */; };
 		DFD7445522EF2FDE00D6C685 /* A1093B1040.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD7445422EF2FDE00D6C685 /* A1093B1040.cpp */; };
 		DFD7445722EF3EAD00D6C685 /* A1069B1019.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD7445622EF3EAD00D6C685 /* A1069B1019.cpp */; };
+		DFD95F1524E62B9C001E7779 /* 7-4 Replacement Selection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD95F1424E62B9C001E7779 /* 7-4 Replacement Selection.cpp */; };
+		DFD95F1924E637BB001E7779 /* 7-2 The Judger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD95F1824E637BB001E7779 /* 7-2 The Judger.cpp */; };
 		DFD9E7F52476C68C0041B99C /* A1144.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFD9E7F42476C68C0041B99C /* A1144.cpp */; };
 		DFDB297D23F250EE0091F311 /* A1001.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDB297C23F250EE0091F311 /* A1001.cpp */; };
 		DFDB297F23F251330091F311 /* A1002.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DFDB297E23F251330091F311 /* A1002.cpp */; };
@@ -811,6 +813,8 @@
 		DFD3DC6223FF69BD004C0B28 /* A1103.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1103.cpp; sourceTree = "<group>"; };
 		DFD7445422EF2FDE00D6C685 /* A1093B1040.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1093B1040.cpp; sourceTree = "<group>"; };
 		DFD7445622EF3EAD00D6C685 /* A1069B1019.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1069B1019.cpp; sourceTree = "<group>"; };
+		DFD95F1424E62B9C001E7779 /* 7-4 Replacement Selection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "7-4 Replacement Selection.cpp"; sourceTree = "<group>"; };
+		DFD95F1824E637BB001E7779 /* 7-2 The Judger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = "7-2 The Judger.cpp"; sourceTree = "<group>"; };
 		DFD9E7F42476C68C0041B99C /* A1144.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1144.cpp; sourceTree = "<group>"; };
 		DFDB297C23F250EE0091F311 /* A1001.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1001.cpp; sourceTree = "<group>"; };
 		DFDB297E23F251330091F311 /* A1002.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = A1002.cpp; sourceTree = "<group>"; };
@@ -1154,6 +1158,8 @@
 				DF5EFEA624741B17000194FF /* A1146.cpp */,
 				DFAE29F5241B328100380219 /* A1151.cpp */,
 				DF84F7C1242B397200DD732D /* A1152.cpp */,
+				DFD95F1424E62B9C001E7779 /* 7-4 Replacement Selection.cpp */,
+				DFD95F1824E637BB001E7779 /* 7-2 The Judger.cpp */,
 			);
 			path = DataStructure3;
 			sourceTree = "<group>";
@@ -1458,6 +1464,7 @@
 				DF2836E424541695002FA8A7 /* A1052.cpp in Sources */,
 				DF7C7E15247942100099320A /* A1124.cpp in Sources */,
 				DF60EBDD23C5FD8D0013D733 /* A1085.cpp in Sources */,
+				DFD95F1524E62B9C001E7779 /* 7-4 Replacement Selection.cpp in Sources */,
 				DF1A7B0A23F7DE7C00F3039A /* A1047.cpp in Sources */,
 				DF9C091124064EB600A38071 /* A1125.cpp in Sources */,
 				DF71920123B4CB7700D5237E /* A1010.cpp in Sources */,
@@ -1744,6 +1751,7 @@
 				DF8DF05F2418CE970037FA75 /* A1104.cpp in Sources */,
 				DF71504123BCCEDD00F49D25 /* A1039.cpp in Sources */,
 				DF43902A22EF140000AF8F9B /* B1020.cpp in Sources */,
+				DFD95F1924E637BB001E7779 /* 7-2 The Judger.cpp in Sources */,
 				DF30D25B23E83ADD00C62DA0 /* A1122.cpp in Sources */,
 				DFA057C722FC574A00B84ECD /* graph.cpp in Sources */,
 				DF71920323B4D6DE00D5237E /* A1011.cpp in Sources */,
